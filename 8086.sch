@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -866,11 +866,27 @@ Wire Wire Line
 	10900 4600 10900 2750
 Wire Wire Line
 	10900 2750 10150 2750
+Connection ~ 10150 2750
+$Sheet
+S 800  5050 950  1150
+U 60790D94
+F0 "Clock" 50
+F1 "CLK.sch" 50
+F2 "CLK" O R 1750 5150 50 
+F3 "RESET" O R 1750 5300 50 
+$EndSheet
+Wire Wire Line
+	1750 5150 1850 5150
+Wire Wire Line
+	1750 5300 1850 5300
 Wire Bus Line
 	9250 2850 9250 5500
 Wire Bus Line
 	6850 850  6850 5100
 Wire Bus Line
 	4100 1550 4100 3600
-Connection ~ 10150 2750
+Text Label 1850 5150 0    50   ~ 0
+CLK
+Text Label 1850 5300 0    50   ~ 0
+RESET
 $EndSCHEMATC
