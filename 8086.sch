@@ -875,6 +875,7 @@ F1 "CLK.sch" 50
 F2 "CLK" O R 1750 5150 50 
 F3 "RESET" O R 1750 5300 50 
 F4 "READY" O R 1750 5450 50 
+F5 "PCLK" O R 1750 5600 50 
 $EndSheet
 Wire Wire Line
 	1750 5150 1850 5150
@@ -886,12 +887,16 @@ Text Label 1850 5300 0    50   ~ 0
 RESET
 Wire Wire Line
 	1750 5450 1850 5450
+Text Label 1850 5450 0    50   ~ 0
+READY
+Wire Wire Line
+	1750 5600 1850 5600
 Wire Bus Line
 	9250 2850 9250 5500
 Wire Bus Line
 	6850 850  6850 5100
 Wire Bus Line
 	4850 2000 4850 4050
-Text Label 1850 5450 0    50   ~ 0
-READY
+Text Label 1850 5600 0    50   ~ 0
+PCLK
 $EndSCHEMATC
