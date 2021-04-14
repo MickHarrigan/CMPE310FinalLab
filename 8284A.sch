@@ -1,0 +1,170 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Timer:8284 U?
+U 1 1 6076232A
+P 5650 3350
+F 0 "U?" H 5650 4431 50  0000 C CNN
+F 1 "8284" H 5650 4340 50  0000 C CNN
+F 2 "Package_DIP:DIP-18_W7.62mm" H 5650 3350 50  0001 C CIN
+F 3 "http://www.cpu-galaxy.at/cpu/ram%20rom%20eprom/other_intel_chips/other_intel-Dateien/D8284A_Datasheet.pdf" H 5650 3350 50  0001 C CNN
+	1    5650 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3750 4650 3750
+Wire Wire Line
+	4450 3750 4450 3850
+$Comp
+L power:GNDREF #PWR?
+U 1 1 60766758
+P 4450 3850
+F 0 "#PWR?" H 4450 3600 50  0001 C CNN
+F 1 "GNDREF" H 4455 3677 50  0000 C CNN
+F 2 "" H 4450 3850 50  0001 C CNN
+F 3 "" H 4450 3850 50  0001 C CNN
+	1    4450 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3550 4650 3550
+Wire Wire Line
+	4650 3550 4650 3750
+Connection ~ 4650 3750
+Wire Wire Line
+	4650 3750 4450 3750
+Wire Wire Line
+	6350 3750 6600 3750
+Wire Wire Line
+	6600 3750 6600 3650
+Wire Wire Line
+	6600 3650 6900 3650
+Wire Wire Line
+	6900 3650 6900 3700
+Wire Wire Line
+	6350 3950 6600 3950
+Wire Wire Line
+	6600 3950 6600 4050
+$Comp
+L Device:Crystal Y?
+U 1 1 60769DE9
+P 6900 3850
+F 0 "Y?" H 6900 4118 50  0000 C CNN
+F 1 "Crystal" H 6900 4027 50  0000 C CNN
+F 2 "" H 6900 3850 50  0001 C CNN
+F 3 "~" H 6900 3850 50  0001 C CNN
+	1    6900 3850
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6600 4050 6900 4050
+Wire Wire Line
+	6900 4050 6900 4000
+Wire Wire Line
+	6350 2750 6650 2750
+$Sheet
+S 7850 2700 950  550 
+U 60772B15
+F0 "Hierarchial Sheet for Clk and Reset" 50
+F1 "8284A_H.sch" 50
+$EndSheet
+Text HLabel 6650 2750 1    50   Input ~ 0
+CLK
+Wire Wire Line
+	6350 3150 6650 3150
+Text HLabel 6650 3150 1    50   Input ~ 0
+RESET
+Wire Wire Line
+	4950 2750 4250 2750
+Wire Wire Line
+	4250 2750 4250 2600
+$Comp
+L Device:R_US R
+U 1 1 6077AAF5
+P 4250 2450
+F 0 "R" H 4318 2496 50  0000 L CNN
+F 1 "10k" H 4318 2405 50  0000 L CNN
+F 2 "" V 4290 2440 50  0001 C CNN
+F 3 "~" H 4250 2450 50  0001 C CNN
+F 4 "R" H 4250 2450 50  0001 C CNN "Spice_Primitive"
+F 5 "10k" H 4250 2450 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4250 2450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4250 2450
+	1    0    0    -1  
+$EndComp
+Connection ~ 4250 2750
+Wire Wire Line
+	4250 2750 4250 2900
+$Comp
+L Device:C C
+U 1 1 6077CC40
+P 4250 3050
+F 0 "C" H 4365 3096 50  0000 L CNN
+F 1 "10uF" H 4365 3005 50  0000 L CNN
+F 2 "" H 4288 2900 50  0001 C CNN
+F 3 "~" H 4250 3050 50  0001 C CNN
+F 4 "C" H 4250 3050 50  0001 C CNN "Spice_Primitive"
+F 5 "10u" H 4250 3050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4250 3050 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4250 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3200 4250 3300
+$Comp
+L power:GNDREF #PWR?
+U 1 1 6077E399
+P 4250 3300
+F 0 "#PWR?" H 4250 3050 50  0001 C CNN
+F 1 "GNDREF" H 4255 3127 50  0000 C CNN
+F 2 "" H 4250 3300 50  0001 C CNN
+F 3 "" H 4250 3300 50  0001 C CNN
+	1    4250 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2200 4250 2300
+Wire Wire Line
+	4250 2750 3650 2750
+Wire Wire Line
+	3650 2750 3650 2450
+$Comp
+L Switch:SW_DPST_x2 SW
+U 1 1 607846F3
+P 3650 2250
+F 0 "SW" V 3696 2162 50  0000 R CNN
+F 1 "SW_DPST_x2" V 3605 2162 50  0000 R CNN
+F 2 "" H 3650 2250 50  0001 C CNN
+F 3 "~" H 3650 2250 50  0001 C CNN
+	1    3650 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 2050 3650 1800
+$Comp
+L power:GNDREF #PWR?
+U 1 1 60786E03
+P 3650 1800
+F 0 "#PWR?" H 3650 1550 50  0001 C CNN
+F 1 "GNDREF" H 3655 1627 50  0000 C CNN
+F 2 "" H 3650 1800 50  0001 C CNN
+F 3 "" H 3650 1800 50  0001 C CNN
+	1    3650 1800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4250 2200 5350 2200
+$EndSCHEMATC
