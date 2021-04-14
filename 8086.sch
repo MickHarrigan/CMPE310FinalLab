@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -49,17 +49,6 @@ Wire Wire Line
 	3850 2000 4000 2000
 Wire Wire Line
 	3850 2100 4000 2100
-$Comp
-L MCU_Intel:8086_Min_Mode U?
-U 1 1 60761E58
-P 3150 2700
-F 0 "U?" H 3150 4681 50  0000 C CNN
-F 1 "8086_Min_Mode" H 3150 4590 50  0000 C CNN
-F 2 "Package_DIP:DIP-40_W15.24mm" H 3200 2800 50  0001 C CIN
-F 3 "http://datasheets.chipdb.org/Intel/x86/808x/datashts/8086/231455-006.pdf" H 3150 2750 50  0001 C CNN
-	1    3150 2700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3850 2200 4000 2200
 Wire Wire Line
@@ -229,8 +218,6 @@ F 3 "~" H 1650 1900 50  0001 C CNN
 	1    1650 1900
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1850 1900 2450 1900
 Wire Wire Line
 	1850 1550 1850 1900
 Connection ~ 1850 1900
@@ -424,23 +411,23 @@ AD13
 Text Label 7000 3600 0    50   ~ 0
 AD14
 Text Label 7000 3700 0    50   ~ 0
-AF15
+AD15
 Entry Wire Line
 	6850 4800 6950 4900
 Text Label 7000 4900 0    50   ~ 0
-AD16
+A16
 Entry Wire Line
 	6850 4900 6950 5000
 Text Label 7000 5000 0    50   ~ 0
-AD17
+A17
 Entry Wire Line
 	6850 5000 6950 5100
 Text Label 7000 5100 0    50   ~ 0
-AD18
+A18
 Entry Wire Line
 	6850 5100 6950 5200
 Text Label 7000 5200 0    50   ~ 0
-AD19
+A19
 NoConn ~ 7250 5300
 NoConn ~ 7250 5400
 NoConn ~ 7250 5500
@@ -756,9 +743,7 @@ Wire Wire Line
 	9650 5600 9350 5600
 Text Label 9250 2850 0    50   ~ 0
 AD[0:15]
-Text Label 3850 1200 0    50   ~ 0
-DT~R
-Text Label 3850 1300 0    50   ~ 0
+Text Label 4000 1300 0    50   ~ 0
 ~DEN
 Text Label 9650 4050 2    50   ~ 0
 ~DEN
@@ -860,14 +845,8 @@ NoConn ~ 2450 3100
 NoConn ~ 2450 4200
 Text HLabel 3850 1500 2    50   Output ~ 0
 ~BHE~S7
-Wire Wire Line
-	2450 1400 2300 1400
 Text Label 2300 1400 2    50   ~ 0
 READY
-Wire Wire Line
-	2300 1600 2450 1600
-Wire Wire Line
-	2450 1200 2300 1200
 $Comp
 L power:GND #PWR?
 U 1 1 6085F789
@@ -890,10 +869,35 @@ F 3 "" H 3250 4500 50  0001 C CNN
 	1    3250 4500
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1850 1900 2450 1900
+Wire Wire Line
+	2300 1600 2450 1600
+Wire Wire Line
+	2450 1400 2300 1400
+Wire Wire Line
+	2450 1200 2300 1200
+$Comp
+L MCU_Intel:8086_Min_Mode U?
+U 1 1 60761E58
+P 3150 2700
+F 0 "U?" H 3150 4681 50  0000 C CNN
+F 1 "8086_Min_Mode" H 3150 4590 50  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm" H 3200 2800 50  0001 C CIN
+F 3 "http://datasheets.chipdb.org/Intel/x86/808x/datashts/8086/231455-006.pdf" H 3150 2750 50  0001 C CNN
+	1    3150 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1200 4000 1200
+Text Label 4000 1200 0    50   ~ 0
+DT~R
+Wire Wire Line
+	3850 1300 4000 1300
+Wire Bus Line
+	9250 2850 9250 5500
 Wire Bus Line
 	6850 850  6850 5100
 Wire Bus Line
 	4100 1550 4100 3600
-Wire Bus Line
-	9250 2850 9250 5500
 $EndSCHEMATC
