@@ -168,8 +168,6 @@ NoConn ~ 4950 3050
 NoConn ~ 4950 2950
 NoConn ~ 4950 3950
 NoConn ~ 6350 3450
-NoConn ~ 6350 3350
-NoConn ~ 6350 2950
 $Comp
 L power:GND #PWR0116
 U 1 1 607932E0
@@ -199,4 +197,12 @@ Wire Wire Line
 Wire Wire Line
 	5450 2450 5650 2450
 Connection ~ 5350 2200
+Wire Wire Line
+	6350 2950 6700 2950
+Text HLabel 6700 2950 2    50   Output ~ 0
+READY
+Wire Wire Line
+	6350 3350 6650 3350
+Text HLabel 6650 3350 2    50   Output ~ 0
+PCLK
 $EndSCHEMATC
