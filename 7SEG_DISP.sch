@@ -48,8 +48,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS374" H 7600 5500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7000 950  6850 950 
-Text Label 6750 1200 2    50   ~ 0
-D15-D8
 Wire Wire Line
 	7000 1050 6850 1050
 Wire Wire Line
@@ -192,8 +190,6 @@ F 3 "" H 8850 6550 50  0001 C CNN
 	1    8850 6550
 	1    0    0    -1  
 $EndComp
-Text Label 6800 5200 2    50   ~ 0
-D0-7
 Wire Wire Line
 	7000 1950 7000 2250
 Wire Wire Line
@@ -354,39 +350,37 @@ F 3 "" H 3300 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Entry Wire Line
-	2700 1300 2800 1200
+	2600 1300 2700 1200
 Entry Wire Line
-	2700 1400 2800 1300
+	2600 1400 2700 1300
 Entry Wire Line
-	2700 1500 2800 1400
+	2600 1500 2700 1400
 Entry Wire Line
-	2700 1600 2800 1500
+	2600 1600 2700 1500
 Entry Wire Line
-	2700 1700 2800 1600
+	2600 1700 2700 1600
 Entry Wire Line
-	2700 2000 2800 1900
+	2600 2000 2700 1900
 Entry Wire Line
-	2700 1800 2800 1700
+	2600 1800 2700 1700
 Entry Wire Line
-	2700 1900 2800 1800
+	2600 1900 2700 1800
 Entry Wire Line
-	2700 3450 2800 3350
+	2550 3450 2650 3350
 Entry Wire Line
-	2700 3150 2800 3050
+	2550 3150 2650 3050
 Entry Wire Line
-	2700 3350 2800 3250
+	2550 3350 2650 3250
 Entry Wire Line
-	2700 3250 2800 3150
+	2550 3250 2650 3150
 Entry Wire Line
-	2700 3650 2800 3550
+	2550 3650 2650 3550
 Entry Wire Line
-	2700 3750 2800 3650
+	2550 3750 2650 3650
 Entry Wire Line
-	2700 3850 2800 3750
+	2550 3850 2650 3750
 Entry Wire Line
-	2700 3550 2800 3450
-Text Label 6750 3300 2    50   ~ 0
-D7-D0
+	2550 3550 2650 3450
 Wire Wire Line
 	8050 3800 8100 3800
 Wire Wire Line
@@ -756,6 +750,78 @@ Text HLabel 2550 1100 0    50   Input ~ 0
 ~IOWC
 Text HLabel 2550 2950 0    50   Input ~ 0
 ~IOWC
+Text HLabel 2600 1300 0    50   Input ~ 0
+A15-A8
+Text HLabel 2550 3150 0    50   Input ~ 0
+A7-A0
+Text Label 2800 1200 2    50   ~ 0
+A15
+Wire Wire Line
+	2800 1200 2700 1200
+Wire Wire Line
+	2800 1300 2700 1300
+Wire Wire Line
+	2800 1400 2700 1400
+Wire Wire Line
+	2800 1500 2700 1500
+Wire Wire Line
+	2800 1600 2700 1600
+Wire Wire Line
+	2800 1700 2700 1700
+Wire Wire Line
+	2800 1800 2700 1800
+Wire Wire Line
+	2800 1900 2700 1900
+Text Label 2800 1300 2    50   ~ 0
+A14
+Text Label 2800 1400 2    50   ~ 0
+A13
+Text Label 2800 1500 2    50   ~ 0
+A12
+Text Label 2800 1600 2    50   ~ 0
+A11
+Text Label 2800 1700 2    50   ~ 0
+A10
+Text Label 2800 1800 2    50   ~ 0
+A9
+Text Label 2800 1900 2    50   ~ 0
+A8
+Wire Wire Line
+	2800 3050 2650 3050
+Wire Wire Line
+	2800 3150 2650 3150
+Wire Wire Line
+	2800 3250 2650 3250
+Wire Wire Line
+	2800 3350 2650 3350
+Wire Wire Line
+	2800 3450 2650 3450
+Wire Wire Line
+	2800 3550 2650 3550
+Wire Wire Line
+	2800 3650 2650 3650
+Wire Wire Line
+	2800 3750 2650 3750
+Text Label 2800 3050 2    50   ~ 0
+A7
+Text Label 2800 3150 2    50   ~ 0
+A6
+Text Label 2800 3250 2    50   ~ 0
+A5
+Text Label 2800 3350 2    50   ~ 0
+A4
+Text Label 2800 3450 2    50   ~ 0
+A3
+Text Label 2800 3550 2    50   ~ 0
+A2
+Text Label 2800 3650 2    50   ~ 0
+A1
+Text Label 2800 3750 2    50   ~ 0
+A0
+Text HLabel 6750 1050 0    50   Input ~ 0
+D15-D8
+Text HLabel 6750 3200 0    50   Input ~ 0
+D7-D0
 Wire Bus Line
 	6750 1050 6750 1750
 Wire Bus Line
@@ -763,11 +829,41 @@ Wire Bus Line
 Wire Bus Line
 	6800 5100 6800 5800
 Wire Bus Line
-	2700 1300 2700 2000
+	2600 1300 2600 2000
 Wire Bus Line
-	2700 3150 2700 3850
-Text HLabel 2700 1300 0    50   Input ~ 0
-A15-A8
-Text HLabel 2700 3150 0    50   Input ~ 0
-A7-A0
+	2550 3150 2550 3850
+Text HLabel 6800 5100 0    50   Input ~ 0
+D7-D0-LEDS
+Text Label 7000 950  2    50   ~ 0
+D15
+Text Label 7000 1050 2    50   ~ 0
+D14
+Text Label 7000 1150 2    50   ~ 0
+D13
+Text Label 7000 1250 2    50   ~ 0
+D12
+Text Label 7000 1350 2    50   ~ 0
+D11
+Text Label 7000 1450 2    50   ~ 0
+D10
+Text Label 7000 1550 2    50   ~ 0
+D9
+Text Label 7000 1650 2    50   ~ 0
+D8
+Text Label 7050 3100 2    50   ~ 0
+D7
+Text Label 7050 3200 2    50   ~ 0
+D6
+Text Label 7050 3300 2    50   ~ 0
+D5
+Text Label 7050 3400 2    50   ~ 0
+D4
+Text Label 7050 3500 2    50   ~ 0
+D3
+Text Label 7050 3600 2    50   ~ 0
+D2
+Text Label 7050 3700 2    50   ~ 0
+D1
+Text Label 7050 3800 2    50   ~ 0
+D0
 $EndSCHEMATC
