@@ -71,21 +71,6 @@ F 3 "" H 8800 3550 50  0001 C CNN
 	1    8800 3550
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R?
-U 1 1 6078C718
-P 8500 3550
-F 0 "R?" V 8293 3550 50  0000 C CNN
-F 1 "R" V 8384 3550 50  0000 C CNN
-F 2 "" V 8430 3550 50  0001 C CNN
-F 3 "~" H 8500 3550 50  0001 C CNN
-	1    8500 3550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8250 3550 8350 3550
-Wire Wire Line
-	8650 3550 8800 3550
 NoConn ~ 8250 3150
 NoConn ~ 8250 3250
 NoConn ~ 8250 3350
@@ -408,6 +393,8 @@ Text HLabel 4250 4500 3    50   Input ~ 0
 A[2:15]
 Wire Bus Line
 	3150 4500 5200 4500
+Wire Wire Line
+	8250 3550 8800 3550
 Wire Bus Line
 	3050 2700 3050 4400
 Wire Bus Line
