@@ -162,14 +162,6 @@ Wire Wire Line
 	3750 5000 3750 6950
 Wire Wire Line
 	3750 6950 1050 6950
-Wire Wire Line
-	1050 3650 5050 3650
-Wire Wire Line
-	1050 3750 5050 3750
-Entry Wire Line
-	950  3750 1050 3650
-Entry Wire Line
-	950  3850 1050 3750
 Entry Wire Line
 	950  5000 1050 4900
 Entry Wire Line
@@ -221,11 +213,9 @@ Wire Wire Line
 Wire Wire Line
 	6250 2850 6550 2850
 Text HLabel 6550 2850 2    50   Output ~ 0
-OUT0
+COUNTER1
 Text HLabel 6550 3850 2    50   Output ~ 0
-OUT2
-Text HLabel 6550 3350 2    50   Output ~ 0
-IR1
+COUNTER3
 Wire Wire Line
 	6250 2650 6550 2650
 Wire Wire Line
@@ -254,7 +244,7 @@ Text HLabel 6550 3250 2    50   Output ~ 0
 G1
 Text HLabel 6550 3750 2    50   Output ~ 0
 G2
-Text HLabel 950  4150 0    50   Input ~ 0
+Text HLabel 950  5050 0    50   Input ~ 0
 A[0:15]
 $Comp
 L Logic_Programmable:PAL16L8 U1
@@ -271,5 +261,11 @@ NoConn ~ 2700 5500
 Wire Bus Line
 	4250 2650 4250 3350
 Wire Bus Line
-	950  3750 950  7050
+	950  5000 950  7050
+Text HLabel 5050 3650 0    50   Input ~ 0
+A0
+Text HLabel 5050 3750 0    50   Input ~ 0
+A1
+Text HLabel 6550 3350 2    50   Output ~ 0
+COUNTER2
 $EndSCHEMATC
