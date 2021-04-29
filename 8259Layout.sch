@@ -176,7 +176,7 @@ Text HLabel 8450 2650 2    50   Input ~ 0
 Text HLabel 6650 3750 0    50   Output ~ 0
 8259INT_Out
 Text HLabel 6300 3000 0    50   BiDi ~ 0
-AD[0:7]
+D[0:7]
 Wire Wire Line
 	7050 3150 6850 3150
 Text HLabel 6850 3150 0    50   Input ~ 0
@@ -352,10 +352,6 @@ Wire Wire Line
 	3850 3950 3850 3900
 Entry Wire Line
 	3050 4050 3150 3950
-Wire Bus Line
-	3050 4050 2850 4050
-Text HLabel 2850 4050 0    50   Input ~ 0
-A[2:11]
 Entry Wire Line
 	5200 3500 5300 3600
 Entry Wire Line
@@ -365,8 +361,6 @@ Entry Wire Line
 Entry Wire Line
 	5200 3200 5300 3300
 NoConn ~ 4850 3700
-Text HLabel 5300 3850 2    50   Input ~ 0
-A[12:15]
 Wire Wire Line
 	5200 3500 4850 3500
 Wire Wire Line
@@ -376,12 +370,6 @@ Wire Wire Line
 Wire Wire Line
 	5200 3200 4850 3200
 NoConn ~ 4850 3100
-Wire Bus Line
-	5300 3200 5300 3850
-Wire Bus Line
-	6600 2150 6600 3000
-Wire Bus Line
-	3050 2700 3050 4050
 Text HLabel 4850 3600 2    50   Input ~ 0
 IO\~M
 Text Label 4850 3500 0    50   ~ 0
@@ -412,4 +400,18 @@ Text Label 3400 3800 0    50   ~ 0
 A10
 Text Label 3400 3950 0    50   ~ 0
 A11
+Entry Bus Bus
+	5300 4400 5200 4500
+Entry Bus Bus
+	3050 4400 3150 4500
+Text HLabel 4250 4500 3    50   Input ~ 0
+A[2:15]
+Wire Bus Line
+	3150 4500 5200 4500
+Wire Bus Line
+	3050 2700 3050 4400
+Wire Bus Line
+	5300 3200 5300 4400
+Wire Bus Line
+	6600 2150 6600 3000
 $EndSCHEMATC
