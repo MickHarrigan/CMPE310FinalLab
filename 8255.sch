@@ -1,0 +1,334 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface:8255 U?
+U 1 1 608B2A09
+P 5550 2900
+F 0 "U?" H 5550 4681 50  0000 C CNN
+F 1 "8255" H 5550 4590 50  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm" H 5550 3200 50  0001 C CNN
+F 3 "http://aturing.umcs.maine.edu/~meadow/courses/cos335/Intel8255A.pdf" H 5550 3200 50  0001 C CNN
+	1    5550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2800 4550 2800
+Wire Wire Line
+	4850 2900 4550 2900
+Wire Wire Line
+	4850 3000 4550 3000
+Wire Wire Line
+	4850 3100 4550 3100
+Wire Wire Line
+	4850 3200 4550 3200
+Wire Wire Line
+	4850 3300 4550 3300
+Wire Wire Line
+	4850 3400 4550 3400
+Wire Wire Line
+	4850 3500 4550 3500
+Entry Wire Line
+	4450 3500 4550 3400
+Entry Wire Line
+	4450 3400 4550 3300
+Entry Wire Line
+	4450 3300 4550 3200
+Entry Wire Line
+	4450 3200 4550 3100
+Entry Wire Line
+	4450 3100 4550 3000
+Entry Wire Line
+	4450 3000 4550 2900
+Entry Wire Line
+	4450 2900 4550 2800
+Entry Wire Line
+	4450 3600 4550 3500
+Text HLabel 4450 2950 0    50   Input ~ 0
+D[0:7]
+Text HLabel 4850 2400 0    50   Input ~ 0
+A0
+Text HLabel 4850 2500 0    50   Input ~ 0
+A1
+Text HLabel 4850 2000 0    50   Input ~ 0
+~RD
+Text HLabel 4850 2100 0    50   Input ~ 0
+~WR
+Text HLabel 4850 1600 0    50   Input ~ 0
+RESET
+$Comp
+L power:VCC #PWR?
+U 1 1 608B5335
+P 5550 950
+F 0 "#PWR?" H 5550 800 50  0001 C CNN
+F 1 "VCC" H 5565 1123 50  0000 C CNN
+F 2 "" H 5550 950 50  0001 C CNN
+F 3 "" H 5550 950 50  0001 C CNN
+	1    5550 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608B5BE4
+P 5550 4500
+F 0 "#PWR?" H 5550 4250 50  0001 C CNN
+F 1 "GND" H 5555 4327 50  0000 C CNN
+F 2 "" H 5550 4500 50  0001 C CNN
+F 3 "" H 5550 4500 50  0001 C CNN
+	1    5550 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_Programmable:PAL16L8 U?
+U 1 1 608B3749
+P 1950 3700
+F 0 "U?" H 1950 4581 50  0000 C CNN
+F 1 "PAL16L8" H 1950 4490 50  0000 C CNN
+F 2 "" H 1950 3700 50  0001 C CNN
+F 3 "" H 1950 3700 50  0001 C CNN
+	1    1950 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3900 4150 3900
+Wire Wire Line
+	4150 3900 4150 1900
+Wire Wire Line
+	4150 1900 4850 1900
+NoConn ~ 2450 3300
+NoConn ~ 2450 3200
+Wire Wire Line
+	1950 4300 1950 4500
+Wire Wire Line
+	2450 3800 2500 3800
+Wire Wire Line
+	2500 3800 2500 4400
+Wire Wire Line
+	2500 4400 850  4400
+Text HLabel 850  4400 0    50   Input ~ 0
+IO~M
+Wire Wire Line
+	1450 3200 1250 3200
+Wire Wire Line
+	1450 3300 1250 3300
+Wire Wire Line
+	1450 3400 1250 3400
+Wire Wire Line
+	1450 3500 1250 3500
+Wire Wire Line
+	1450 3600 1250 3600
+Wire Wire Line
+	1450 3700 1250 3700
+Wire Wire Line
+	1450 3800 1250 3800
+Wire Wire Line
+	1450 3900 1250 3900
+Wire Wire Line
+	1450 4000 1250 4000
+Entry Wire Line
+	1150 3500 1250 3400
+Entry Wire Line
+	1150 3300 1250 3200
+Entry Wire Line
+	1150 3400 1250 3300
+Entry Wire Line
+	1150 3600 1250 3500
+Entry Wire Line
+	1150 3700 1250 3600
+Entry Wire Line
+	1150 3800 1250 3700
+Entry Wire Line
+	1150 3900 1250 3800
+Entry Wire Line
+	1150 4000 1250 3900
+Entry Wire Line
+	1150 4100 1250 4000
+Entry Wire Line
+	1150 4200 1250 4100
+Wire Wire Line
+	1250 4100 1450 4100
+Wire Wire Line
+	2450 3700 2550 3700
+Wire Wire Line
+	2550 3700 2550 4600
+Wire Wire Line
+	2550 4600 1250 4600
+Wire Wire Line
+	2450 3600 2600 3600
+Wire Wire Line
+	2600 4700 1250 4700
+Wire Wire Line
+	2600 3600 2600 4700
+Wire Wire Line
+	2450 3500 2650 3500
+Wire Wire Line
+	2650 3500 2650 4800
+Wire Wire Line
+	2650 4800 1250 4800
+Wire Wire Line
+	2450 3400 2750 3400
+Wire Wire Line
+	2750 3400 2750 4900
+Wire Wire Line
+	2750 4900 1250 4900
+Entry Wire Line
+	1150 4700 1250 4600
+Entry Wire Line
+	1150 4800 1250 4700
+Entry Wire Line
+	1150 4900 1250 4800
+Entry Wire Line
+	1150 5000 1250 4900
+Text HLabel 1150 3350 0    50   Input ~ 0
+A[2:15]
+Entry Wire Line
+	6500 1600 6600 1700
+Entry Wire Line
+	6500 1700 6600 1800
+Entry Wire Line
+	6500 1800 6600 1900
+Entry Wire Line
+	6500 1900 6600 2000
+Entry Wire Line
+	6500 2000 6600 2100
+Entry Wire Line
+	6500 2100 6600 2200
+Entry Wire Line
+	6500 2200 6600 2300
+Entry Wire Line
+	6500 2300 6600 2400
+Wire Wire Line
+	6250 1600 6500 1600
+Wire Wire Line
+	6250 1700 6500 1700
+Wire Wire Line
+	6250 1800 6500 1800
+Wire Wire Line
+	6250 1900 6500 1900
+Wire Wire Line
+	6250 2000 6500 2000
+Wire Wire Line
+	6250 2100 6500 2100
+Wire Wire Line
+	6250 2200 6500 2200
+Wire Wire Line
+	6250 2300 6500 2300
+Wire Wire Line
+	6250 2500 6500 2500
+Wire Wire Line
+	6250 2600 6500 2600
+Wire Wire Line
+	6250 2700 6500 2700
+Wire Wire Line
+	6250 2800 6500 2800
+Wire Wire Line
+	6250 2900 6500 2900
+Wire Wire Line
+	6250 3000 6500 3000
+Wire Wire Line
+	6250 3100 6500 3100
+Wire Wire Line
+	6250 3200 6500 3200
+Wire Wire Line
+	6250 3400 6500 3400
+Wire Wire Line
+	6250 3500 6500 3500
+Wire Wire Line
+	6250 3600 6500 3600
+Wire Wire Line
+	6250 3700 6500 3700
+Wire Wire Line
+	6250 3800 6500 3800
+Wire Wire Line
+	6250 3900 6500 3900
+Wire Wire Line
+	6250 4000 6500 4000
+Wire Wire Line
+	6250 4100 6500 4100
+Entry Wire Line
+	6500 2500 6600 2600
+Entry Wire Line
+	6500 2600 6600 2700
+Entry Wire Line
+	6500 2700 6600 2800
+Entry Wire Line
+	6500 2800 6600 2900
+Entry Wire Line
+	6500 2900 6600 3000
+Entry Wire Line
+	6500 3000 6600 3100
+Entry Wire Line
+	6500 3100 6600 3200
+Entry Wire Line
+	6500 3200 6600 3300
+Entry Wire Line
+	6500 3400 6600 3500
+Entry Wire Line
+	6500 3500 6600 3600
+Entry Wire Line
+	6500 3600 6600 3700
+Entry Wire Line
+	6500 3700 6600 3800
+Entry Wire Line
+	6500 3800 6600 3900
+Entry Wire Line
+	6500 3900 6600 4000
+Entry Wire Line
+	6500 4000 6600 4100
+Entry Wire Line
+	6500 4100 6600 4200
+Text HLabel 6600 1900 2    50   Output ~ 0
+PA[0:7]
+Text HLabel 6600 2750 2    50   Output ~ 0
+PB[0:7]
+Text HLabel 6600 3650 2    50   Output ~ 0
+PC[0:7]
+Wire Wire Line
+	5550 950  5550 1300
+$Comp
+L power:GND #PWR?
+U 1 1 608EC8C6
+P 1950 4500
+F 0 "#PWR?" H 1950 4250 50  0001 C CNN
+F 1 "GND" H 1955 4327 50  0000 C CNN
+F 2 "" H 1950 4500 50  0001 C CNN
+F 3 "" H 1950 4500 50  0001 C CNN
+	1    1950 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 608ED89D
+P 1950 2700
+F 0 "#PWR?" H 1950 2550 50  0001 C CNN
+F 1 "VCC" H 1965 2873 50  0000 C CNN
+F 2 "" H 1950 2700 50  0001 C CNN
+F 3 "" H 1950 2700 50  0001 C CNN
+	1    1950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3000 1950 2700
+Wire Bus Line
+	4450 2900 4450 3600
+Wire Bus Line
+	6600 1700 6600 2400
+Wire Bus Line
+	6600 2600 6600 3300
+Wire Bus Line
+	6600 3500 6600 4200
+Wire Bus Line
+	1150 3300 1150 5000
+$EndSCHEMATC
