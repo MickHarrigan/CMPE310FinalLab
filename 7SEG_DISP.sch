@@ -751,9 +751,9 @@ Text HLabel 2550 1100 0    50   Input ~ 0
 Text HLabel 2550 2950 0    50   Input ~ 0
 ~IOWC
 Text HLabel 2600 1300 0    50   Input ~ 0
-A15-A8
+A[8:15]
 Text HLabel 2550 3150 0    50   Input ~ 0
-A7-A0
+A[0:7]
 Text Label 2800 1200 2    50   ~ 0
 A15
 Wire Wire Line
@@ -819,21 +819,11 @@ A1
 Text Label 2800 3750 2    50   ~ 0
 A0
 Text HLabel 6750 1050 0    50   Input ~ 0
-D15-D8
+D[8:15]
 Text HLabel 6750 3200 0    50   Input ~ 0
-D7-D0
-Wire Bus Line
-	6750 1050 6750 1750
-Wire Bus Line
-	6750 3200 6750 3900
-Wire Bus Line
-	6800 5100 6800 5800
-Wire Bus Line
-	2600 1300 2600 2000
-Wire Bus Line
-	2550 3150 2550 3850
+D[0:7]
 Text HLabel 6800 5100 0    50   Input ~ 0
-D7-D0-LEDS
+D[0:7]
 Text Label 7000 950  2    50   ~ 0
 D15
 Text Label 7000 1050 2    50   ~ 0
@@ -866,4 +856,14 @@ Text Label 7050 3700 2    50   ~ 0
 D1
 Text Label 7050 3800 2    50   ~ 0
 D0
+Wire Bus Line
+	6750 1050 6750 1750
+Wire Bus Line
+	6750 3200 6750 3900
+Wire Bus Line
+	6800 5100 6800 5800
+Wire Bus Line
+	2600 1300 2600 2000
+Wire Bus Line
+	2550 3150 2550 3850
 $EndSCHEMATC
