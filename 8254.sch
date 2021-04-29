@@ -68,17 +68,6 @@ Wire Wire Line
 	5050 3450 4350 3450
 Wire Wire Line
 	5050 3550 4350 3550
-$Comp
-L Logic_Programmable:PAL16L8 U1
-U 1 1 6084E134
-P 2200 5300
-F 0 "U1" H 2200 6181 50  0000 C CNN
-F 1 "PAL16L8" H 2200 6090 50  0000 C CNN
-F 2 "" H 2200 5300 50  0001 C CNN
-F 3 "" H 2200 5300 50  0001 C CNN
-	1    2200 5300
-	1    0    0    -1  
-$EndComp
 Entry Wire Line
 	4250 2750 4350 2650
 Entry Wire Line
@@ -96,31 +85,11 @@ Entry Wire Line
 Entry Wire Line
 	4250 2650 4350 2550
 Text HLabel 4250 2650 0    50   Input ~ 0
-D0-D7
+D[0:7]
 Text HLabel 4350 3450 0    50   Input ~ 0
 ~RD
 Text HLabel 4350 3550 0    50   Input ~ 0
 ~WR
-Text HLabel 1050 3650 0    50   Input ~ 0
-A1
-Text HLabel 1050 3750 0    50   Input ~ 0
-A2
-Text HLabel 4350 2550 2    50   Input ~ 0
-D0
-Text HLabel 4350 2650 2    50   Input ~ 0
-D1
-Text HLabel 4350 2750 2    50   Input ~ 0
-D2
-Text HLabel 4350 2850 2    50   Input ~ 0
-D3
-Text HLabel 4350 2950 2    50   Input ~ 0
-D4
-Text HLabel 4350 3050 2    50   Input ~ 0
-D5
-Text HLabel 4350 3150 2    50   Input ~ 0
-D6
-Text HLabel 4350 3250 2    50   Input ~ 0
-D7
 Text HLabel 1200 4800 0    50   Input ~ 0
 M~IO
 $Comp
@@ -147,24 +116,6 @@ F 3 "" H 2200 4200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2200 4600 2200 4200
-Text HLabel 1050 4900 0    50   Input ~ 0
-A0
-Text HLabel 1050 5000 0    50   Input ~ 0
-A3
-Text HLabel 1050 5100 0    50   Input ~ 0
-A4
-Text HLabel 1050 5200 0    50   Input ~ 0
-A5
-Text HLabel 1050 5300 0    50   Input ~ 0
-A6
-Text HLabel 1050 5400 0    50   Input ~ 0
-A7
-Text HLabel 1050 5500 0    50   Input ~ 0
-A8
-Text HLabel 1050 5600 0    50   Input ~ 0
-A9
-Text HLabel 1050 5700 0    50   Input ~ 0
-A10
 Text HLabel 3850 3950 0    50   Input ~ 0
 ~WAIT2
 Wire Wire Line
@@ -211,16 +162,6 @@ Wire Wire Line
 	3750 5000 3750 6950
 Wire Wire Line
 	3750 6950 1050 6950
-Text HLabel 1050 6200 0    50   Input ~ 0
-A11
-Text HLabel 1050 6350 0    50   Input ~ 0
-A12
-Text HLabel 1050 6550 0    50   Input ~ 0
-A13
-Text HLabel 1050 6750 0    50   Input ~ 0
-A14
-Text HLabel 1050 6950 0    50   Input ~ 0
-A15
 Wire Wire Line
 	1050 3650 5050 3650
 Wire Wire Line
@@ -314,7 +255,19 @@ G1
 Text HLabel 6550 3750 2    50   Output ~ 0
 G2
 Text HLabel 950  4150 0    50   Input ~ 0
-A0-A15
+A[0:15]
+$Comp
+L Logic_Programmable:PAL16L8 U1
+U 1 1 6084E134
+P 2200 5300
+F 0 "U1" H 2200 6181 50  0000 C CNN
+F 1 "PAL16L8" H 2200 6090 50  0000 C CNN
+F 2 "" H 2200 5300 50  0001 C CNN
+F 3 "" H 2200 5300 50  0001 C CNN
+	1    2200 5300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2700 5500
 Wire Bus Line
 	4250 2650 4250 3350
 Wire Bus Line
