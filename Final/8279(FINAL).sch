@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 14
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -454,40 +454,6 @@ Wire Wire Line
 	1850 3700 1700 3700
 Text Label 1700 3700 0    50   ~ 0
 Col4
-Wire Wire Line
-	1850 4500 1400 4500
-Wire Wire Line
-	1850 4600 1400 4600
-Wire Wire Line
-	1850 4700 1400 4700
-Wire Wire Line
-	1850 4800 1400 4800
-Wire Wire Line
-	1850 4900 1400 4900
-Wire Wire Line
-	1850 5000 1400 5000
-Wire Wire Line
-	1850 5100 1400 5100
-Wire Wire Line
-	1850 4400 1400 4400
-Entry Wire Line
-	1300 4300 1400 4400
-Entry Wire Line
-	1300 4300 1400 4400
-Entry Wire Line
-	1300 4400 1400 4500
-Entry Wire Line
-	1300 4500 1400 4600
-Entry Wire Line
-	1300 4600 1400 4700
-Entry Wire Line
-	1300 4700 1400 4800
-Entry Wire Line
-	1300 4800 1400 4900
-Entry Wire Line
-	1300 4900 1400 5000
-Entry Wire Line
-	1300 5000 1400 5100
 NoConn ~ 1850 3800
 NoConn ~ 1850 3900
 NoConn ~ 1850 4000
@@ -602,10 +568,6 @@ Text Label 9550 4800 0    50   ~ 0
 Col4
 Wire Wire Line
 	1600 3600 1850 3600
-Text HLabel 1100 5150 0    50   BiDi ~ 0
-D[0..7]
-Wire Bus Line
-	1300 5150 1100 5150
 $Comp
 L power:+5V #PWR047
 U 1 1 607EFF38
@@ -674,60 +636,6 @@ F 3 "" H 4900 5500 50  0001 C CNN
 	1    4900 5500
 	0    1    1    0   
 $EndComp
-Entry Wire Line
-	3900 6300 4000 6400
-Entry Wire Line
-	3900 6200 4000 6300
-Entry Wire Line
-	3900 6100 4000 6200
-Entry Wire Line
-	3900 6000 4000 6100
-Entry Wire Line
-	3900 5900 4000 6000
-Entry Wire Line
-	3900 5800 4000 5900
-Entry Wire Line
-	3900 5700 4000 5800
-Entry Wire Line
-	3900 5600 4000 5700
-Wire Wire Line
-	4000 5700 4400 5700
-Wire Wire Line
-	4000 5800 4400 5800
-Wire Wire Line
-	4000 5900 4400 5900
-Wire Wire Line
-	4000 6000 4400 6000
-Wire Wire Line
-	4000 6100 4400 6100
-Wire Wire Line
-	4000 6200 4400 6200
-Wire Wire Line
-	4000 6300 4400 6300
-Wire Wire Line
-	4000 6400 4400 6400
-Wire Wire Line
-	4400 6500 4000 6500
-Wire Wire Line
-	4400 6600 4000 6600
-Entry Wire Line
-	3900 6500 4000 6600
-Entry Wire Line
-	3900 6400 4000 6500
-Entry Wire Line
-	5700 5900 5800 6000
-Entry Wire Line
-	5700 6000 5800 6100
-Entry Wire Line
-	5700 6100 5800 6200
-Entry Wire Line
-	5700 6200 5800 6300
-Wire Wire Line
-	5400 5900 5700 5900
-Wire Wire Line
-	5400 6000 5700 6000
-Wire Wire Line
-	5400 6100 5700 6100
 Wire Wire Line
 	3900 5100 5650 5100
 Wire Wire Line
@@ -736,50 +644,52 @@ Wire Wire Line
 	5650 5700 5400 5700
 Text Label 5450 5700 0    50   ~ 0
 CS
-Wire Wire Line
-	5400 6200 5700 6200
-Wire Bus Line
-	5800 6300 5900 6300
-Text HLabel 5900 6300 2    50   Input ~ 0
-A[12..15]
 Text HLabel 5400 6300 2    50   Input ~ 0
 IO\~M
 NoConn ~ 5400 6400
 NoConn ~ 5400 5800
-Text Label 5500 5900 0    50   ~ 0
-A15
-Text Label 5500 6000 0    50   ~ 0
-A14
-Text Label 5500 6100 0    50   ~ 0
-A13
-Text Label 5500 6200 0    50   ~ 0
-A12
-Text Label 4300 5700 0    50   ~ 0
+Text HLabel 1850 4400 0    50   Input ~ 0
+D0
+Text HLabel 1850 4500 0    50   Input ~ 0
+D1
+Text HLabel 1850 4600 0    50   Input ~ 0
+D2
+Text HLabel 1850 4700 0    50   Input ~ 0
+D3
+Text HLabel 1850 4800 0    50   Input ~ 0
+D4
+Text HLabel 1850 4900 0    50   Input ~ 0
+D5
+Text HLabel 1850 5000 0    50   Input ~ 0
+D6
+Text HLabel 1850 5100 0    50   Input ~ 0
+D7
+Text HLabel 4400 5700 0    50   Input ~ 0
 A2
-Text Label 4300 5800 0    50   ~ 0
-A3
-Text Label 4300 5900 0    50   ~ 0
-A4
-Text Label 4300 6000 0    50   ~ 0
-A5
-Text Label 4300 6100 0    50   ~ 0
-A6
-Text Label 4300 6200 0    50   ~ 0
-A7
-Text Label 4300 6300 0    50   ~ 0
-A8
-Text Label 4300 6400 0    50   ~ 0
-A9
-Text Label 4300 6500 0    50   ~ 0
-A10
-Text Label 4300 6600 0    50   ~ 0
+Text HLabel 4400 6600 0    50   Input ~ 0
 A11
-Text HLabel 3900 6650 0    50   Input ~ 0
-A[2..11]
-Wire Bus Line
-	5800 6000 5800 6300
-Wire Bus Line
-	3900 5600 3900 6650
-Wire Bus Line
-	1300 4300 1300 5150
+Text HLabel 4400 6500 0    50   Input ~ 0
+A10
+Text HLabel 4400 6400 0    50   Input ~ 0
+A9
+Text HLabel 4400 6300 0    50   Input ~ 0
+A8
+Text HLabel 4400 6200 0    50   Input ~ 0
+A7
+Text HLabel 4400 6100 0    50   Input ~ 0
+A6
+Text HLabel 4400 6000 0    50   Input ~ 0
+A5
+Text HLabel 4400 5900 0    50   Input ~ 0
+A4
+Text HLabel 4400 5800 0    50   Input ~ 0
+A3
+Text HLabel 5400 5900 2    50   Input ~ 0
+A15
+Text HLabel 5400 6000 2    50   Input ~ 0
+A14
+Text HLabel 5400 6100 2    50   Input ~ 0
+A13
+Text HLabel 5400 6200 2    50   Input ~ 0
+A12
 $EndSCHEMATC
