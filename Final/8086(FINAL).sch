@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 14
+Sheet 2 16
 Title ""
 Date ""
 Rev ""
@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Switch:SW_Push SW1
+L Switch:SW_Push CPU_Switch
 U 1 1 607622DA
 P 2200 1700
-F 0 "SW1" V 2154 1848 50  0000 L CNN
+F 0 "CPU_Switch" V 2154 1848 50  0000 L CNN
 F 1 "SW_Push" V 2245 1848 50  0000 L CNN
 F 2 "" H 2200 1900 50  0001 C CNN
 F 3 "~" H 2200 1900 50  0001 C CNN
@@ -154,13 +154,13 @@ AD14
 Text Label 4600 3650 0    50   ~ 0
 AD15
 Text Label 4600 3850 0    50   ~ 0
-A16
+S3
 Text Label 4600 3950 0    50   ~ 0
-A17
+S4
 Text Label 4600 4050 0    50   ~ 0
-A18
+S5
 Text Label 4600 4150 0    50   ~ 0
-A19
+S6
 Wire Wire Line
 	2200 1500 2200 1350
 Wire Wire Line
@@ -185,10 +185,10 @@ $EndComp
 Wire Wire Line
 	1800 1800 1800 2350
 $Comp
-L Device:CP1_Small C1
+L Device:CP1_Small CPU_Capacitor
 U 1 1 6077E7C3
 P 1800 1700
-F 0 "C1" H 1891 1654 50  0000 L CNN
+F 0 "CPU_Capacitor" H 1891 1654 50  0000 L CNN
 F 1 "CP1_Small" H 1891 1745 50  0000 L CNN
 F 2 "" H 1800 1700 50  0001 C CNN
 F 3 "~" H 1800 1700 50  0001 C CNN
@@ -200,7 +200,7 @@ L pspice:DIODE D1
 U 1 1 60781792
 P 2400 2350
 F 0 "D1" H 2400 2085 50  0000 C CNN
-F 1 "DIODE" H 2400 2176 50  0000 C CNN
+F 1 "CPU_Diode" H 2400 2176 50  0000 C CNN
 F 2 "" H 2400 2350 50  0001 C CNN
 F 3 "~" H 2400 2350 50  0001 C CNN
 	1    2400 2350
@@ -219,10 +219,10 @@ Wire Wire Line
 Connection ~ 2200 2350
 Connection ~ 1800 2350
 $Comp
-L Device:R_US R1
+L Device:R_US CPU_Resistor
 U 1 1 607846D6
 P 2400 2000
-F 0 "R1" V 2195 2000 50  0000 C CNN
+F 0 "CPU_Resistor" V 2195 2000 50  0000 C CNN
 F 1 "R_US" V 2286 2000 50  0000 C CNN
 F 2 "" V 2440 1990 50  0001 C CNN
 F 3 "~" H 2400 2000 50  0001 C CNN
@@ -381,19 +381,19 @@ AD15
 Entry Wire Line
 	6850 4800 6950 4900
 Text Label 7000 4900 0    50   ~ 0
-A16
+S3
 Entry Wire Line
 	6850 4900 6950 5000
 Text Label 7000 5000 0    50   ~ 0
-A17
+S4
 Entry Wire Line
 	6850 5000 6950 5100
 Text Label 7000 5100 0    50   ~ 0
-A18
+S5
 Entry Wire Line
 	6850 5100 6950 5200
 Text Label 7000 5200 0    50   ~ 0
-A19
+S6
 NoConn ~ 7250 5300
 NoConn ~ 7250 5400
 NoConn ~ 7250 5500
@@ -760,7 +760,7 @@ Text HLabel 10650 5100 2    50   Output ~ 0
 D10
 Text HLabel 10650 5000 2    50   Output ~ 0
 D9
-Text HLabel 10750 4900 2    50   Output ~ 0
+Text HLabel 10650 4900 2    50   Output ~ 0
 D8
 Text Label 3050 2050 2    50   ~ 0
 RESET
@@ -773,8 +773,7 @@ Text HLabel 4600 4650 2    50   Output ~ 0
 NoConn ~ 3200 2850
 NoConn ~ 3200 3350
 NoConn ~ 3200 3550
-NoConn ~ 3200 4650
-Text HLabel 4600 1950 2    50   Output ~ 0
+Text HLabel 4600 1950 2    50   3State ~ 0
 ~BHE~S7
 Text Label 3050 1850 2    50   ~ 0
 READY
@@ -809,10 +808,10 @@ Wire Wire Line
 Wire Wire Line
 	3200 1650 3050 1650
 $Comp
-L MCU_Intel:8086_Min_Mode U1
+L MCU_Intel:8086_Min_Mode CPU
 U 1 1 60761E58
 P 3900 3150
-F 0 "U1" H 3900 5131 50  0000 C CNN
+F 0 "CPU" H 3900 5131 50  0000 C CNN
 F 1 "8086_Min_Mode" H 3900 5040 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm" H 3950 3250 50  0001 C CIN
 F 3 "http://datasheets.chipdb.org/Intel/x86/808x/datashts/8086/231455-006.pdf" H 3900 3200 50  0001 C CNN
@@ -897,12 +896,21 @@ F 3 "" H 2200 1350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 2200 1350
-Wire Wire Line
-	10650 4900 10750 4900
 Wire Bus Line
 	9250 2850 9250 5500
 Wire Bus Line
 	6850 850  6850 5100
 Wire Bus Line
 	4850 2000 4850 4050
+$Comp
+L power:VCC #PWR0120
+U 1 1 61629C6A
+P 3200 4650
+F 0 "#PWR0120" H 3200 4500 50  0001 C CNN
+F 1 "VCC" V 3215 4777 50  0000 L CNN
+F 2 "" H 3200 4650 50  0001 C CNN
+F 3 "" H 3200 4650 50  0001 C CNN
+	1    3200 4650
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

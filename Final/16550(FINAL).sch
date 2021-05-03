@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 14
+Sheet 11 16
 Title ""
 Date ""
 Rev ""
@@ -107,24 +107,14 @@ Text HLabel 6100 2650 2    50   Input ~ 0
 ~DSR
 Text HLabel 6100 2750 2    50   Input ~ 0
 ~CTS
-Text HLabel 6100 3050 2    50   Output ~ 0
-~OUT1
 Text HLabel 6100 3150 2    50   Output ~ 0
 ~DTR
 Text HLabel 6100 3250 2    50   Output ~ 0
 ~RTS
-Text HLabel 6100 3350 2    50   Output ~ 0
-~OUT2
 Text HLabel 6100 3850 2    50   Input ~ 0
 SIN
 Text HLabel 6100 3950 2    50   Output ~ 0
 SOUT
-Text HLabel 6100 4250 2    50   Output ~ 0
-~RXRDY
-Text HLabel 6100 4350 2    50   Output ~ 0
-~TXRDY
-Text HLabel 6100 4450 2    50   Output ~ 0
-DDIS
 Wire Wire Line
 	6100 4850 6150 4850
 Wire Wire Line
@@ -151,4 +141,9 @@ F 3 "" H 5100 1900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5100 1900 5100 1950
+NoConn ~ 6100 4250
+NoConn ~ 6100 4350
+NoConn ~ 6100 4450
+NoConn ~ 6100 3050
+NoConn ~ 6100 3350
 $EndSCHEMATC
