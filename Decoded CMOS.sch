@@ -13,20 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L 74xx:74LS04 U?
-U 1 1 60983958
-P 4800 2600
-F 0 "U?" H 4800 2917 50  0000 C CNN
-F 1 "74LS04" H 4800 2826 50  0000 C CNN
-F 2 "" H 4800 2600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 4800 2600 50  0001 C CNN
-	1    4800 2600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4500 2600 4450 2600
-Connection ~ 4500 2600
 $Comp
 L power:VCC #PWR?
 U 1 1 60992286
@@ -88,6 +76,10 @@ Text HLabel 3450 2600 0    50   Input ~ 0
 A17
 Text HLabel 3450 2700 0    50   Input ~ 0
 A18
+Text HLabel 3450 2800 0    50   Input ~ 0
+A19
+Wire Wire Line
+	4500 2600 4500 3050
 $Comp
 L 74xx:74LS138 U?
 U 1 1 60933BB4
@@ -99,55 +91,61 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 3950 2900 50  0001 C CNN
 	1    3950 2900
 	1    0    0    -1  
 $EndComp
-Text HLabel 3450 2800 0    50   Input ~ 0
-A19
-$Sheet
-S 5400 3550 550  1850
-U 609BC8EF
-F0 "sheet609BC8D1" 50
-F1 "file609A61A3.sch" 50
-F2 "~WR" I R 5950 5100 50 
-F3 "CS" I L 5400 5300 50 
-F4 "A16" I L 5400 3600 50 
-F5 "~RD" I R 5950 5000 50 
-F6 "A0" I L 5400 5200 50 
-F7 "A15" I L 5400 3700 50 
-F8 "A12" I L 5400 4000 50 
-F9 "A7" I L 5400 4500 50 
-F10 "A6" I L 5400 4600 50 
-F11 "A5" I L 5400 4700 50 
-F12 "A4" I L 5400 4800 50 
-F13 "A3" I L 5400 4900 50 
-F14 "A2" I L 5400 5000 50 
-F15 "A1" I L 5400 5100 50 
-F16 "D0" B R 5950 3600 50 
-F17 "D1" B R 5950 3700 50 
-F18 "D2" B R 5950 3800 50 
-F19 "A14" I L 5400 3800 50 
-F20 "A13" I L 5400 3900 50 
-F21 "A8" I L 5400 4400 50 
-F22 "A9" I L 5400 4300 50 
-F23 "A11" I L 5400 4100 50 
-F24 "A10" I L 5400 4200 50 
-F25 "D7" B R 5950 4300 50 
-F26 "D6" B R 5950 4200 50 
-F27 "D5" B R 5950 4100 50 
-F28 "D4" B R 5950 4000 50 
-F29 "D3" B R 5950 3900 50 
-$EndSheet
+Connection ~ 4500 2600
+Text HLabel 5350 2950 0    50   Input ~ 0
+A0
+Text HLabel 5350 2850 0    50   Input ~ 0
+A1
+Text HLabel 5350 2750 0    50   Input ~ 0
+A2
+Text HLabel 5350 2650 0    50   Input ~ 0
+A3
+Text HLabel 5350 2550 0    50   Input ~ 0
+A4
+Text HLabel 5350 2450 0    50   Input ~ 0
+A5
+Text HLabel 5350 2350 0    50   Input ~ 0
+A6
+Text HLabel 5350 2250 0    50   Input ~ 0
+A7
+Text HLabel 5350 2150 0    50   Input ~ 0
+A8
+Text HLabel 5350 2050 0    50   Input ~ 0
+A9
+Text HLabel 5350 1950 0    50   Input ~ 0
+A10
+Text HLabel 5350 1850 0    50   Input ~ 0
+A11
+Text HLabel 5350 1750 0    50   Input ~ 0
+A12
+Text HLabel 5350 1650 0    50   Input ~ 0
+A13
+Text HLabel 5350 1550 0    50   Input ~ 0
+A14
+Text HLabel 5350 1450 0    50   Input ~ 0
+A15
+Text HLabel 5350 1350 0    50   Input ~ 0
+A16
 Wire Wire Line
 	4500 3050 5350 3050
-Wire Wire Line
-	4500 2600 4500 3050
-Wire Wire Line
-	5100 2600 5100 5300
-Wire Wire Line
-	5100 5300 5400 5300
+$Comp
+L 74xx:74LS04 U?
+U 1 1 60983958
+P 4800 2600
+F 0 "U?" H 4800 2917 50  0000 C CNN
+F 1 "74LS04" H 4800 2826 50  0000 C CNN
+F 2 "" H 4800 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 4800 2600 50  0001 C CNN
+	1    4800 2600
+	1    0    0    -1  
+$EndComp
+Text HLabel 5900 1350 2    50   BiDi ~ 0
+D0
 $Sheet
 S 5350 1300 550  1850
 U 609A61A4
-F0 "Sheet609A61A3" 50
-F1 "file609A61A3.sch" 50
+F0 "CMOSHierarchal" 50
+F1 "CMOS.sch" 50
 F2 "~WR" I R 5900 2850 50 
 F3 "CS" I L 5350 3050 50 
 F4 "A16" I L 5350 1350 50 
@@ -177,4 +175,114 @@ F27 "D5" B R 5900 1850 50
 F28 "D4" B R 5900 1750 50 
 F29 "D3" B R 5900 1650 50 
 $EndSheet
+Text HLabel 5900 1450 2    50   BiDi ~ 0
+D1
+Text HLabel 5900 1550 2    50   BiDi ~ 0
+D2
+Text HLabel 5900 1650 2    50   BiDi ~ 0
+D3
+Text HLabel 5900 1750 2    50   BiDi ~ 0
+D4
+Text HLabel 5900 1850 2    50   BiDi ~ 0
+D5
+Text HLabel 5900 1950 2    50   BiDi ~ 0
+D6
+Text HLabel 5900 2050 2    50   BiDi ~ 0
+D7
+Text HLabel 5900 2750 2    50   Input ~ 0
+~RD
+Text HLabel 5900 2850 2    50   Input ~ 0
+~WR
+Text HLabel 5350 5100 0    50   Input ~ 0
+A0
+Text HLabel 5350 5000 0    50   Input ~ 0
+A1
+Text HLabel 5350 4900 0    50   Input ~ 0
+A2
+Text HLabel 5350 4800 0    50   Input ~ 0
+A3
+Text HLabel 5350 4700 0    50   Input ~ 0
+A4
+Text HLabel 5350 4600 0    50   Input ~ 0
+A5
+Text HLabel 5350 4500 0    50   Input ~ 0
+A6
+Text HLabel 5350 4400 0    50   Input ~ 0
+A7
+Text HLabel 5350 4300 0    50   Input ~ 0
+A8
+Text HLabel 5350 4200 0    50   Input ~ 0
+A9
+Text HLabel 5350 4100 0    50   Input ~ 0
+A10
+Text HLabel 5350 4000 0    50   Input ~ 0
+A11
+Text HLabel 5350 3900 0    50   Input ~ 0
+A12
+Text HLabel 5350 3800 0    50   Input ~ 0
+A13
+Text HLabel 5350 3700 0    50   Input ~ 0
+A14
+Text HLabel 5350 3600 0    50   Input ~ 0
+A15
+Text HLabel 5350 3500 0    50   Input ~ 0
+A16
+Text HLabel 5900 3500 2    50   BiDi ~ 0
+D0
+$Sheet
+S 5350 3450 550  1850
+U 609279EA
+F0 "CMOSHierarchal1" 50
+F1 "CMOS.sch" 50
+F2 "~WR" I R 5900 5000 50 
+F3 "CS" I L 5350 5200 50 
+F4 "A16" I L 5350 3500 50 
+F5 "~RD" I R 5900 4900 50 
+F6 "A0" I L 5350 5100 50 
+F7 "A15" I L 5350 3600 50 
+F8 "A12" I L 5350 3900 50 
+F9 "A7" I L 5350 4400 50 
+F10 "A6" I L 5350 4500 50 
+F11 "A5" I L 5350 4600 50 
+F12 "A4" I L 5350 4700 50 
+F13 "A3" I L 5350 4800 50 
+F14 "A2" I L 5350 4900 50 
+F15 "A1" I L 5350 5000 50 
+F16 "D0" B R 5900 3500 50 
+F17 "D1" B R 5900 3600 50 
+F18 "D2" B R 5900 3700 50 
+F19 "A14" I L 5350 3700 50 
+F20 "A13" I L 5350 3800 50 
+F21 "A8" I L 5350 4300 50 
+F22 "A9" I L 5350 4200 50 
+F23 "A11" I L 5350 4000 50 
+F24 "A10" I L 5350 4100 50 
+F25 "D7" B R 5900 4200 50 
+F26 "D6" B R 5900 4100 50 
+F27 "D5" B R 5900 4000 50 
+F28 "D4" B R 5900 3900 50 
+F29 "D3" B R 5900 3800 50 
+$EndSheet
+Text HLabel 5900 3600 2    50   BiDi ~ 0
+D1
+Text HLabel 5900 3700 2    50   BiDi ~ 0
+D2
+Text HLabel 5900 3800 2    50   BiDi ~ 0
+D3
+Text HLabel 5900 3900 2    50   BiDi ~ 0
+D4
+Text HLabel 5900 4000 2    50   BiDi ~ 0
+D5
+Text HLabel 5900 4100 2    50   BiDi ~ 0
+D6
+Text HLabel 5900 4200 2    50   BiDi ~ 0
+D7
+Text HLabel 5900 4900 2    50   Input ~ 0
+~RD
+Text HLabel 5900 5000 2    50   Input ~ 0
+~WR
+Wire Wire Line
+	5100 2600 5100 5200
+Wire Wire Line
+	5100 5200 5350 5200
 $EndSCHEMATC
