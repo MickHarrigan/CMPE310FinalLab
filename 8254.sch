@@ -215,7 +215,7 @@ D7
 Text HLabel 1200 4800 0    50   Input ~ 0
 M~IO
 Text HLabel 1050 4900 0    50   Input ~ 0
-A0
+A2
 Wire Wire Line
 	2700 5000 3000 5000
 Wire Wire Line

@@ -445,7 +445,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 3200 1300 3200
 Text HLabel 1300 3200 0    50   Input ~ 0
-A0
+A2
 Text HLabel 1300 3300 0    50   Input ~ 0
 A3
 Text HLabel 1300 3400 0    50   Input ~ 0
