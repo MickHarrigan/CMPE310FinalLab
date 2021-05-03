@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 14 16
+Sheet 15 16
 Title ""
 Date ""
 Rev ""
@@ -14,32 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 74xx:74LS244 U38
-U 1 1 60898164
-P 6000 2300
-F 0 "U38" V 6046 1456 50  0000 R CNN
-F 1 "74LS244" V 5955 1456 50  0000 R CNN
-F 2 "" H 6000 2300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74ls244.pdf" H 6000 2300 50  0001 C CNN
-	1    6000 2300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Logic_Programmable:PAL16L8 U39
-U 1 1 60899CC6
-P 8150 3800
-F 0 "U39" H 8150 4681 50  0000 C CNN
-F 1 "PAL16L8" H 8150 4590 50  0000 C CNN
-F 2 "" H 8150 3800 50  0001 C CNN
-F 3 "" H 8150 3800 50  0001 C CNN
-	1    8150 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_DIP_x08 SW26
+L Switch:SW_DIP_x08 DIP_Switches
 U 1 1 608A2143
 P 5800 5100
-F 0 "SW26" V 5754 5630 50  0000 L CNN
+F 0 "DIP_Switches" V 5754 5630 50  0000 L CNN
 F 1 "SW_DIP_x08" V 5845 5630 50  0000 L CNN
 F 2 "" H 5800 5100 50  0001 C CNN
 F 3 "~" H 5800 5100 50  0001 C CNN
@@ -231,17 +209,6 @@ F 3 "~" H 4500 3350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R15
-U 1 1 608CAEF1
-P 4500 3500
-F 0 "R15" V 4500 2900 50  0000 C CNN
-F 1 "R_Small_US" V 4386 3500 50  0000 C CNN
-F 2 "" H 4500 3500 50  0001 C CNN
-F 3 "~" H 4500 3500 50  0001 C CNN
-	1    4500 3500
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R_Small_US R16
 U 1 1 608CC836
 P 4500 3650
@@ -419,4 +386,37 @@ Text HLabel 8650 3700 2    50   Input ~ 0
 A14
 Text HLabel 8650 3800 2    50   Input ~ 0
 A15
+$Comp
+L Logic_Programmable:PAL16L8 DIP_16LA
+U 1 1 60899CC6
+P 8150 3800
+F 0 "DIP_16LA" H 8150 4681 50  0000 C CNN
+F 1 "PAL16L8" H 8150 4590 50  0000 C CNN
+F 2 "" H 8150 3800 50  0001 C CNN
+F 3 "" H 8150 3800 50  0001 C CNN
+	1    8150 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS244 DIP_LS244
+U 1 1 60898164
+P 6000 2300
+F 0 "DIP_LS244" V 6046 1456 50  0000 R CNN
+F 1 "74LS244" V 5955 1456 50  0000 R CNN
+F 2 "" H 6000 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74ls244.pdf" H 6000 2300 50  0001 C CNN
+	1    6000 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R15
+U 1 1 608CAEF1
+P 4500 3500
+F 0 "R15" V 4500 2900 50  0000 C CNN
+F 1 "R_Small_US" V 4386 3500 50  0000 C CNN
+F 2 "" H 4500 3500 50  0001 C CNN
+F 3 "~" H 4500 3500 50  0001 C CNN
+	1    4500 3500
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

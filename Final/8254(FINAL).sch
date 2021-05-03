@@ -175,10 +175,6 @@ Wire Wire Line
 Wire Wire Line
 	7450 3050 7650 3050
 Wire Wire Line
-	6250 3150 7650 3150
-Wire Wire Line
-	6250 3250 7650 3250
-Wire Wire Line
 	6250 3850 7550 3850
 Wire Wire Line
 	7550 3850 7550 3550
@@ -252,4 +248,32 @@ Text HLabel 1050 5600 0    50   Input ~ 0
 A9
 Text HLabel 1050 5700 0    50   Input ~ 0
 A10
+$Comp
+L power:+5V #PWR0133
+U 1 1 61A121ED
+P 6900 3250
+F 0 "#PWR0133" H 6900 3100 50  0001 C CNN
+F 1 "+5V" V 6915 3378 50  0000 L CNN
+F 2 "" H 6900 3250 50  0001 C CNN
+F 3 "" H 6900 3250 50  0001 C CNN
+	1    6900 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 61A1330B
+P 6650 3250
+F 0 "R?" V 6445 3250 50  0000 C CNN
+F 1 "10000" V 6536 3250 50  0000 C CNN
+F 2 "" H 6650 3250 50  0001 C CNN
+F 3 "~" H 6650 3250 50  0001 C CNN
+	1    6650 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 3250 6750 3250
+Wire Wire Line
+	6550 3250 6250 3250
+Text HLabel 6250 3150 2    50   Input ~ 0
+CLK
 $EndSCHEMATC
