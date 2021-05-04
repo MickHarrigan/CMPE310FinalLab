@@ -77,7 +77,7 @@ U 1 1 61587A20
 P 4500 1900
 F 0 "LCD_4x20" H 5050 2165 50  0000 C CNN
 F 1 "LCD4x20" H 5050 2074 50  0000 C CNN
-F 2 "LCD4x20" H 5450 2000 50  0001 L CNN
+F 2 "" H 5450 2000 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/LCD4x20.pdf" H 5450 1900 50  0001 L CNN
 F 4 "LCD Character Display Modules & Accessories STN-Y/G Transfl 77.5 x 47.0" H 5450 1800 50  0001 L CNN "Description"
 F 5 "14.5" H 5450 1700 50  0001 L CNN "Height"
