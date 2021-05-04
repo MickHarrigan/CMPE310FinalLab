@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Timer:8254 U27
+L Timer:8254 Counter1
 U 1 1 60845EE8
 P 5650 3250
-F 0 "U27" H 5650 4431 50  0000 C CNN
+F 0 "Counter1" H 5650 4431 50  0000 C CNN
 F 1 "8254" H 5650 4340 50  0000 C CNN
 F 2 "Package_DIP:DIP-24_W15.24mm" H 5700 3500 50  0001 C CNN
 F 3 "http://www.scs.stanford.edu/10wi-cs140/pintos/specs/8254.pdf" H 5200 4150 50  0001 C CNN
@@ -25,29 +25,16 @@ F 3 "http://www.scs.stanford.edu/10wi-cs140/pintos/specs/8254.pdf" H 5200 4150 5
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR045
-U 1 1 60848002
-P 5650 4250
-F 0 "#PWR045" H 5650 4000 50  0001 C CNN
-F 1 "GND" H 5655 4077 50  0000 C CNN
-F 2 "" H 5650 4250 50  0001 C CNN
-F 3 "" H 5650 4250 50  0001 C CNN
-	1    5650 4250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VCC #PWR044
 U 1 1 6084836A
-P 5650 1950
-F 0 "#PWR044" H 5650 1800 50  0001 C CNN
-F 1 "VCC" H 5665 2123 50  0000 C CNN
-F 2 "" H 5650 1950 50  0001 C CNN
-F 3 "" H 5650 1950 50  0001 C CNN
-	1    5650 1950
+P 5650 1600
+F 0 "#PWR044" H 5650 1450 50  0001 C CNN
+F 1 "VCC" H 5665 1773 50  0000 C CNN
+F 2 "" H 5650 1600 50  0001 C CNN
+F 3 "" H 5650 1600 50  0001 C CNN
+	1    5650 1600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5650 2250 5650 1950
 Wire Wire Line
 	5050 2550 4350 2550
 Wire Wire Line
@@ -75,27 +62,14 @@ Text HLabel 4350 3550 0    50   Input ~ 0
 $Comp
 L power:GND #PWR043
 U 1 1 6085575F
-P 2200 5900
-F 0 "#PWR043" H 2200 5650 50  0001 C CNN
-F 1 "GND" H 2205 5727 50  0000 C CNN
-F 2 "" H 2200 5900 50  0001 C CNN
-F 3 "" H 2200 5900 50  0001 C CNN
-	1    2200 5900
+P 2200 6200
+F 0 "#PWR043" H 2200 5950 50  0001 C CNN
+F 1 "GND" H 2205 6027 50  0000 C CNN
+F 2 "" H 2200 6200 50  0001 C CNN
+F 3 "" H 2200 6200 50  0001 C CNN
+	1    2200 6200
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR042
-U 1 1 60855DD6
-P 2200 4200
-F 0 "#PWR042" H 2200 4050 50  0001 C CNN
-F 1 "VCC" H 2215 4373 50  0000 C CNN
-F 2 "" H 2200 4200 50  0001 C CNN
-F 3 "" H 2200 4200 50  0001 C CNN
-	1    2200 4200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 4600 2200 4200
 Wire Wire Line
 	5050 3950 4700 3950
 Wire Wire Line
@@ -128,10 +102,10 @@ Wire Wire Line
 Wire Wire Line
 	1700 4800 1200 4800
 $Comp
-L Logic_Programmable:PAL16L8 U26
+L Logic_Programmable:PAL16L8 Counter_Decode1
 U 1 1 6084E134
 P 2200 5300
-F 0 "U26" H 2200 6181 50  0000 C CNN
+F 0 "Counter_Decode1" H 2200 6181 50  0000 C CNN
 F 1 "PAL16L8" H 2200 6090 50  0000 C CNN
 F 2 "" H 2200 5300 50  0001 C CNN
 F 3 "" H 2200 5300 50  0001 C CNN
@@ -145,53 +119,28 @@ Text HLabel 5050 3750 0    50   Input ~ 0
 A1
 Text HLabel 6250 3350 2    50   Output ~ 0
 COUNTER2
-$Comp
-L Connector:Conn_01x08_Female J2
-U 1 1 60B4C76F
-P 7850 3150
-F 0 "J2" H 7878 3126 50  0000 L CNN
-F 1 "Conn_01x08_Female" H 7878 3035 50  0000 L CNN
-F 2 "" H 7850 3150 50  0001 C CNN
-F 3 "~" H 7850 3150 50  0001 C CNN
-	1    7850 3150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6250 2650 7550 2650
 Wire Wire Line
-	7550 2650 7550 2850
-Wire Wire Line
-	7550 2850 7650 2850
+	7550 2650 7550 2950
 Wire Wire Line
 	6250 2750 7500 2750
 Wire Wire Line
-	7500 2750 7500 2950
-Wire Wire Line
-	7500 2950 7650 2950
+	7500 2750 7500 3050
 Wire Wire Line
 	6250 2850 7450 2850
 Wire Wire Line
-	7450 2850 7450 3050
-Wire Wire Line
-	7450 3050 7650 3050
+	7450 2850 7450 3150
 Wire Wire Line
 	6250 3850 7550 3850
 Wire Wire Line
-	7550 3850 7550 3550
-Wire Wire Line
-	7550 3550 7650 3550
+	7550 3850 7550 3450
 Wire Wire Line
 	6250 3750 7500 3750
 Wire Wire Line
-	7500 3750 7500 3450
-Wire Wire Line
-	7500 3450 7650 3450
+	7500 3750 7500 3350
 Wire Wire Line
 	6250 3650 7450 3650
-Wire Wire Line
-	7450 3650 7450 3350
-Wire Wire Line
-	7450 3350 7650 3350
 Text HLabel 4350 2550 0    50   Input ~ 0
 D0
 Text HLabel 4350 2650 0    50   Input ~ 0
@@ -260,10 +209,10 @@ F 3 "" H 6900 3250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US Counter_Resistor1
 U 1 1 61A1330B
 P 6650 3250
-F 0 "R?" V 6445 3250 50  0000 C CNN
+F 0 "Counter_Resistor1" V 6445 3250 50  0000 C CNN
 F 1 "10000" V 6536 3250 50  0000 C CNN
 F 2 "" H 6650 3250 50  0001 C CNN
 F 3 "~" H 6650 3250 50  0001 C CNN
@@ -276,4 +225,47 @@ Wire Wire Line
 	6550 3250 6250 3250
 Text HLabel 6250 3150 2    50   Input ~ 0
 CLK
+Wire Wire Line
+	2200 5900 2200 6050
+Wire Wire Line
+	5650 4250 5650 6050
+Wire Wire Line
+	5650 6050 2200 6050
+Connection ~ 2200 6050
+Wire Wire Line
+	2200 1900 5650 1900
+Wire Wire Line
+	2200 1900 2200 4600
+Connection ~ 5650 1900
+Wire Wire Line
+	5650 1900 5650 2250
+Wire Wire Line
+	2200 6050 2200 6200
+Wire Wire Line
+	5650 1600 5650 1900
+Wire Wire Line
+	7450 3650 7450 3250
+$Comp
+L Connector:Conn_01x06_Female Counter_Header1
+U 1 1 61FB5B66
+P 7950 3150
+F 0 "Counter_Header1" H 7978 3126 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 7978 3035 50  0000 L CNN
+F 2 "" H 7950 3150 50  0001 C CNN
+F 3 "~" H 7950 3150 50  0001 C CNN
+	1    7950 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3250 7750 3250
+Wire Wire Line
+	7500 3350 7750 3350
+Wire Wire Line
+	7550 3450 7750 3450
+Wire Wire Line
+	7450 3150 7750 3150
+Wire Wire Line
+	7500 3050 7750 3050
+Wire Wire Line
+	7550 2950 7750 2950
 $EndSCHEMATC

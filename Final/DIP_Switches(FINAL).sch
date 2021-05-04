@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Switch:SW_DIP_x08 DIP_Switches
+L Switch:SW_DIP_x08 DIP_Switches1
 U 1 1 608A2143
 P 5800 5100
-F 0 "DIP_Switches" V 5754 5630 50  0000 L CNN
+F 0 "DIP_Switches1" V 5754 5630 50  0000 L CNN
 F 1 "SW_DIP_x08" V 5845 5630 50  0000 L CNN
 F 2 "" H 5800 5100 50  0001 C CNN
 F 3 "~" H 5800 5100 50  0001 C CNN
@@ -73,8 +73,6 @@ Wire Wire Line
 	6200 5400 6200 5500
 Connection ~ 6200 5500
 Wire Wire Line
-	6200 5500 6450 5500
-Wire Wire Line
 	5500 4800 5500 4400
 Wire Wire Line
 	5600 4800 5600 4250
@@ -113,8 +111,6 @@ F 3 "" H 6400 3000 50  0001 C CNN
 	1    6400 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8150 4400 8150 4600
 $Comp
 L power:GND #PWR067
 U 1 1 608B33A6
@@ -129,12 +125,12 @@ $EndComp
 $Comp
 L power:VCC #PWR063
 U 1 1 608B43B8
-P 5200 2300
-F 0 "#PWR063" H 5200 2150 50  0001 C CNN
-F 1 "VCC" V 5215 2427 50  0000 L CNN
-F 2 "" H 5200 2300 50  0001 C CNN
-F 3 "" H 5200 2300 50  0001 C CNN
-	1    5200 2300
+P 5100 2300
+F 0 "#PWR063" H 5100 2150 50  0001 C CNN
+F 1 "VCC" V 5115 2427 50  0000 L CNN
+F 2 "" H 5100 2300 50  0001 C CNN
+F 3 "" H 5100 2300 50  0001 C CNN
+	1    5100 2300
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -148,10 +144,6 @@ F 3 "" H 8150 2550 50  0001 C CNN
 	1    8150 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8150 2550 8150 3100
-Wire Wire Line
-	6800 2300 6800 2850
 Wire Wire Line
 	6800 2850 6400 2850
 Connection ~ 6400 2850
@@ -282,8 +274,6 @@ Wire Wire Line
 	4400 4400 4050 4400
 Connection ~ 4050 4400
 Wire Wire Line
-	4050 4400 4050 4650
-Wire Wire Line
 	4400 4250 4050 4250
 Connection ~ 4050 4250
 Wire Wire Line
@@ -340,21 +330,21 @@ Wire Wire Line
 	6100 1800 6100 1750
 Wire Wire Line
 	6200 1750 6200 1800
-Text HLabel 5500 1750 1    50   Input ~ 0
+Text HLabel 5500 1750 1    50   Output ~ 0
 D0
-Text HLabel 5600 1750 1    50   Input ~ 0
+Text HLabel 5600 1750 1    50   Output ~ 0
 D1
-Text HLabel 5700 1750 1    50   Input ~ 0
+Text HLabel 5700 1750 1    50   Output ~ 0
 D2
-Text HLabel 5800 1750 1    50   Input ~ 0
+Text HLabel 5800 1750 1    50   Output ~ 0
 D3
-Text HLabel 5900 1750 1    50   Input ~ 0
+Text HLabel 5900 1750 1    50   Output ~ 0
 D4
-Text HLabel 6000 1750 1    50   Input ~ 0
+Text HLabel 6000 1750 1    50   Output ~ 0
 D5
-Text HLabel 6100 1750 1    50   Input ~ 0
+Text HLabel 6100 1750 1    50   Output ~ 0
 D6
-Text HLabel 6200 1750 1    50   Input ~ 0
+Text HLabel 6200 1750 1    50   Output ~ 0
 D7
 Text HLabel 7650 3300 0    50   Input ~ 0
 A0
@@ -387,10 +377,10 @@ A14
 Text HLabel 8650 3800 2    50   Input ~ 0
 A15
 $Comp
-L Logic_Programmable:PAL16L8 DIP_16LA
+L Logic_Programmable:PAL16L8 DIP_16LA1
 U 1 1 60899CC6
 P 8150 3800
-F 0 "DIP_16LA" H 8150 4681 50  0000 C CNN
+F 0 "DIP_16LA1" H 8150 4681 50  0000 C CNN
 F 1 "PAL16L8" H 8150 4590 50  0000 C CNN
 F 2 "" H 8150 3800 50  0001 C CNN
 F 3 "" H 8150 3800 50  0001 C CNN
@@ -419,4 +409,16 @@ F 3 "~" H 4500 3500 50  0001 C CNN
 	1    4500 3500
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	5100 2300 5200 2300
+Wire Wire Line
+	4050 4400 4050 4650
+Wire Wire Line
+	6200 5500 6450 5500
+Wire Wire Line
+	8150 2550 8150 3100
+Wire Wire Line
+	6800 2300 6800 2850
+Wire Wire Line
+	8150 4400 8150 4600
 $EndSCHEMATC

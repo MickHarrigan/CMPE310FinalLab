@@ -477,10 +477,10 @@ F 3 "" H 9350 3050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x02_Female J3
+L Connector:Conn_01x02_Female Power_1
 U 1 1 60B637C0
 P 9550 2300
-F 0 "J3" H 9578 2276 50  0000 L CNN
+F 0 "Power_1" H 9578 2276 50  0000 L CNN
 F 1 "Conn_01x02_Female" H 9578 2185 50  0000 L CNN
 F 2 "" H 9550 2300 50  0001 C CNN
 F 3 "~" H 9550 2300 50  0001 C CNN
