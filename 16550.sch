@@ -314,15 +314,15 @@ RI9
 Text Label 6100 2450 0    50   ~ 0
 RI
 Text Label 6100 2550 0    50   ~ 0
-~DCD
+DCD
 Text Label 6100 2650 0    50   ~ 0
-~DSR
+DSR
 Text Label 6100 2750 0    50   ~ 0
-~CTS
+CTS
 Text Label 6100 3150 0    50   ~ 0
-~DTR
+DTR
 Text Label 6100 3250 0    50   ~ 0
-~RTS
+RTS
 Text Label 4950 5900 2    50   ~ 0
 DCD9
 Text Label 4950 6000 2    50   ~ 0
@@ -336,7 +336,7 @@ DSR9
 Text Label 4950 6500 2    50   ~ 0
 RTS9
 Text Label 4950 6600 2    50   ~ 0
-CTR9
+CTS
 Text Label 4950 6700 2    50   ~ 0
 RI9
 $EndSCHEMATC
