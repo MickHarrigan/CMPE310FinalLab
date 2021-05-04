@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Interface:8255 U23
+L Interface:8255 PPI1
 U 1 1 608B2A09
 P 5600 2650
-F 0 "U23" H 5600 4431 50  0000 C CNN
+F 0 "PPI1" H 5600 4431 50  0000 C CNN
 F 1 "8255" H 5600 4340 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm" H 5600 2950 50  0001 C CNN
 F 3 "http://aturing.umcs.maine.edu/~meadow/courses/cos335/Intel8255A.pdf" H 5600 2950 50  0001 C CNN
@@ -35,40 +35,16 @@ Text HLabel 4900 1850 0    50   Input ~ 0
 Text HLabel 4900 1350 0    50   Input ~ 0
 RESET
 $Comp
-L power:VCC #PWR034
-U 1 1 608B5335
-P 5600 700
-F 0 "#PWR034" H 5600 550 50  0001 C CNN
-F 1 "VCC" H 5615 873 50  0000 C CNN
-F 2 "" H 5600 700 50  0001 C CNN
-F 3 "" H 5600 700 50  0001 C CNN
-	1    5600 700 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR035
-U 1 1 608B5BE4
-P 5600 4250
-F 0 "#PWR035" H 5600 4000 50  0001 C CNN
-F 1 "GND" H 5605 4077 50  0000 C CNN
-F 2 "" H 5600 4250 50  0001 C CNN
-F 3 "" H 5600 4250 50  0001 C CNN
-	1    5600 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Logic_Programmable:PAL16L8 U22
+L Logic_Programmable:PAL16L8 PPI_Decoder
 U 1 1 608B3749
 P 2000 2150
-F 0 "U22" H 2000 3031 50  0000 C CNN
+F 0 "PPI_Decoder" H 2000 3031 50  0000 C CNN
 F 1 "PAL16L8" H 2000 2940 50  0000 C CNN
 F 2 "" H 2000 2150 50  0001 C CNN
 F 3 "" H 2000 2150 50  0001 C CNN
 	1    2000 2150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2000 2750 2000 2950
 Wire Wire Line
 	2500 2350 2550 2350
 Wire Wire Line
@@ -130,27 +106,25 @@ Wire Wire Line
 $Comp
 L power:GND #PWR033
 U 1 1 608EC8C6
-P 2000 2950
-F 0 "#PWR033" H 2000 2700 50  0001 C CNN
-F 1 "GND" H 2005 2777 50  0000 C CNN
-F 2 "" H 2000 2950 50  0001 C CNN
-F 3 "" H 2000 2950 50  0001 C CNN
-	1    2000 2950
+P 1600 7500
+F 0 "#PWR033" H 1600 7250 50  0001 C CNN
+F 1 "GND" H 1605 7327 50  0000 C CNN
+F 2 "" H 1600 7500 50  0001 C CNN
+F 3 "" H 1600 7500 50  0001 C CNN
+	1    1600 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR032
 U 1 1 608ED89D
-P 2000 1150
-F 0 "#PWR032" H 2000 1000 50  0001 C CNN
-F 1 "VCC" H 2015 1323 50  0000 C CNN
-F 2 "" H 2000 1150 50  0001 C CNN
-F 3 "" H 2000 1150 50  0001 C CNN
-	1    2000 1150
+P 2000 800
+F 0 "#PWR032" H 2000 650 50  0001 C CNN
+F 1 "VCC" H 2015 973 50  0000 C CNN
+F 2 "" H 2000 800 50  0001 C CNN
+F 3 "" H 2000 800 50  0001 C CNN
+	1    2000 800 
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2000 1450 2000 1150
 Text Label 6350 1350 0    50   ~ 0
 P0
 Text Label 6350 1450 0    50   ~ 0
@@ -286,10 +260,10 @@ Wire Wire Line
 Wire Wire Line
 	4900 3250 4550 3250
 $Comp
-L Interface:8255 U?
+L Interface:8255 PPI3
 U 1 1 6094AEDD
 P 3850 5900
-F 0 "U?" H 3850 7681 50  0000 C CNN
+F 0 "PPI3" H 3850 7681 50  0000 C CNN
 F 1 "8255" H 3850 7590 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm" H 3850 6200 50  0001 C CNN
 F 3 "http://aturing.umcs.maine.edu/~meadow/courses/cos335/Intel8255A.pdf" H 3850 6200 50  0001 C CNN
@@ -306,17 +280,6 @@ Text HLabel 3150 5100 0    50   Input ~ 0
 ~WR
 Text HLabel 3150 4600 0    50   Input ~ 0
 RESET
-$Comp
-L power:GND #PWR?
-U 1 1 6094AEE8
-P 3850 7500
-F 0 "#PWR?" H 3850 7250 50  0001 C CNN
-F 1 "GND" H 3855 7327 50  0000 C CNN
-F 2 "" H 3850 7500 50  0001 C CNN
-F 3 "" H 3850 7500 50  0001 C CNN
-	1    3850 7500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2450 4900 3150 4900
 Wire Wire Line
@@ -457,17 +420,6 @@ Text HLabel 8500 1850 0    50   Input ~ 0
 ~WR
 Text HLabel 8500 1350 0    50   Input ~ 0
 RESET
-$Comp
-L power:GND #PWR?
-U 1 1 6095BCC2
-P 8550 7150
-F 0 "#PWR?" H 8550 6900 50  0001 C CNN
-F 1 "GND" H 8555 6977 50  0000 C CNN
-F 2 "" H 8550 7150 50  0001 C CNN
-F 3 "" H 8550 7150 50  0001 C CNN
-	1    8550 7150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9900 1350 10150 1350
 Wire Wire Line
@@ -600,53 +552,17 @@ Wire Wire Line
 	2500 1650 4900 1650
 Wire Wire Line
 	2450 4350 2450 4900
-Wire Wire Line
-	5550 1650 6300 1650
 $Comp
-L Connector:Conn_01x08_Female J?
-U 1 1 609C6613
-P 6750 1650
-F 0 "J?" H 6778 1626 50  0000 L CNN
-F 1 "Conn_01x08_Female" H 6778 1535 50  0000 L CNN
-F 2 "" H 6750 1650 50  0001 C CNN
-F 3 "~" H 6750 1650 50  0001 C CNN
-	1    6750 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x08_Female J?
-U 1 1 609F4051
-P 6750 2550
-F 0 "J?" H 6778 2526 50  0000 L CNN
-F 1 "Conn_01x08_Female" H 6778 2435 50  0000 L CNN
-F 2 "" H 6750 2550 50  0001 C CNN
-F 3 "~" H 6750 2550 50  0001 C CNN
-	1    6750 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x08_Female J?
-U 1 1 609F5080
-P 6750 3450
-F 0 "J?" H 6778 3426 50  0000 L CNN
-F 1 "Conn_01x08_Female" H 6778 3335 50  0000 L CNN
-F 2 "" H 6750 3450 50  0001 C CNN
-F 3 "~" H 6750 3450 50  0001 C CNN
-	1    6750 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Interface:8255 U?
+L Interface:8255 PPI2
 U 1 1 6095BCB7
 P 9200 2650
-F 0 "U?" H 9200 4431 50  0000 C CNN
+F 0 "PPI2" H 9200 4431 50  0000 C CNN
 F 1 "8255" H 9200 4340 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm" H 9200 2950 50  0001 C CNN
 F 3 "http://aturing.umcs.maine.edu/~meadow/courses/cos335/Intel8255A.pdf" H 9200 2950 50  0001 C CNN
 	1    9200 2650
 	1    0    0    -1  
 $EndComp
-Connection ~ 6300 1650
 Wire Wire Line
 	4050 1000 7850 1000
 Wire Wire Line
@@ -656,10 +572,10 @@ Wire Wire Line
 Wire Wire Line
 	6300 1650 6550 1650
 $Comp
-L Connector:Conn_01x08_Female J?
+L Connector:Conn_01x08_Female PPI_Header7
 U 1 1 60A5AFA0
 P 5000 4900
-F 0 "J?" H 5028 4876 50  0000 L CNN
+F 0 "PPI_Header7" H 5028 4876 50  0000 L CNN
 F 1 "Conn_01x08_Female" H 5028 4785 50  0000 L CNN
 F 2 "" H 5000 4900 50  0001 C CNN
 F 3 "~" H 5000 4900 50  0001 C CNN
@@ -667,10 +583,10 @@ F 3 "~" H 5000 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x08_Female J?
+L Connector:Conn_01x08_Female PPI_Header8
 U 1 1 60A5D436
 P 5000 5800
-F 0 "J?" H 5028 5776 50  0000 L CNN
+F 0 "PPI_Header8" H 5028 5776 50  0000 L CNN
 F 1 "Conn_01x08_Female" H 5028 5685 50  0000 L CNN
 F 2 "" H 5000 5800 50  0001 C CNN
 F 3 "~" H 5000 5800 50  0001 C CNN
@@ -678,10 +594,10 @@ F 3 "~" H 5000 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x08_Female J?
+L Connector:Conn_01x08_Female PPI_Header9
 U 1 1 60A5E403
 P 5000 6700
-F 0 "J?" H 5028 6676 50  0000 L CNN
+F 0 "PPI_Header9" H 5028 6676 50  0000 L CNN
 F 1 "Conn_01x08_Female" H 5028 6585 50  0000 L CNN
 F 2 "" H 5000 6700 50  0001 C CNN
 F 3 "~" H 5000 6700 50  0001 C CNN
@@ -689,10 +605,10 @@ F 3 "~" H 5000 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x08_Female J?
+L Connector:Conn_01x08_Female PPI_Header4
 U 1 1 60A5F6FB
 P 10350 1650
-F 0 "J?" H 10378 1626 50  0000 L CNN
+F 0 "PPI_Header4" H 10378 1626 50  0000 L CNN
 F 1 "Conn_01x08_Female" H 10378 1535 50  0000 L CNN
 F 2 "" H 10350 1650 50  0001 C CNN
 F 3 "~" H 10350 1650 50  0001 C CNN
@@ -700,10 +616,10 @@ F 3 "~" H 10350 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x08_Female J?
+L Connector:Conn_01x08_Female PPI_Header5
 U 1 1 60A6071B
 P 10350 2550
-F 0 "J?" H 10378 2526 50  0000 L CNN
+F 0 "PPI_Header5" H 10378 2526 50  0000 L CNN
 F 1 "Conn_01x08_Female" H 10378 2435 50  0000 L CNN
 F 2 "" H 10350 2550 50  0001 C CNN
 F 3 "~" H 10350 2550 50  0001 C CNN
@@ -711,10 +627,10 @@ F 3 "~" H 10350 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x08_Female J?
+L Connector:Conn_01x08_Female PPI_Header6
 U 1 1 60A61BBF
 P 10350 3450
-F 0 "J?" H 10378 3426 50  0000 L CNN
+F 0 "PPI_Header6" H 10378 3426 50  0000 L CNN
 F 1 "Conn_01x08_Female" H 10378 3335 50  0000 L CNN
 F 2 "" H 10350 3450 50  0001 C CNN
 F 3 "~" H 10350 3450 50  0001 C CNN
@@ -731,30 +647,91 @@ Wire Wire Line
 	3150 1850 3150 4350
 Wire Wire Line
 	3150 4350 2450 4350
-Wire Wire Line
-	9200 1050 9550 1050
 $Comp
-L power:VCC #PWR?
-U 1 1 60A9B00B
-P 9550 1050
-F 0 "#PWR?" H 9550 900 50  0001 C CNN
-F 1 "VCC" H 9565 1223 50  0000 C CNN
-F 2 "" H 9550 1050 50  0001 C CNN
-F 3 "" H 9550 1050 50  0001 C CNN
-	1    9550 1050
+L Connector:Conn_01x08_Female PPI_Header3
+U 1 1 609F5080
+P 6750 3450
+F 0 "PPI_Header3" H 6778 3426 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 6778 3335 50  0000 L CNN
+F 2 "" H 6750 3450 50  0001 C CNN
+F 3 "~" H 6750 3450 50  0001 C CNN
+	1    6750 3450
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
-U 1 1 60AA3667
-P 4150 4300
-F 0 "#PWR?" H 4150 4150 50  0001 C CNN
-F 1 "VCC" H 4165 4473 50  0000 C CNN
-F 2 "" H 4150 4300 50  0001 C CNN
-F 3 "" H 4150 4300 50  0001 C CNN
-	1    4150 4300
+L Connector:Conn_01x08_Female PPI_Header2
+U 1 1 609F4051
+P 6750 2550
+F 0 "PPI_Header2" H 6778 2526 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 6778 2435 50  0000 L CNN
+F 2 "" H 6750 2550 50  0001 C CNN
+F 3 "~" H 6750 2550 50  0001 C CNN
+	1    6750 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female PPI_Header1
+U 1 1 609C6613
+P 6750 1650
+F 0 "PPI_Header1" H 6778 1626 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 6778 1535 50  0000 L CNN
+F 2 "" H 6750 1650 50  0001 C CNN
+F 3 "~" H 6750 1650 50  0001 C CNN
+	1    6750 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4150 4300 3850 4300
+	2000 800  2000 950 
+Wire Wire Line
+	5600 700  5500 700 
+Wire Wire Line
+	2150 700  2150 950 
+Wire Wire Line
+	2150 950  2000 950 
+Connection ~ 2000 950 
+Wire Wire Line
+	2000 950  2000 1450
+Wire Wire Line
+	3850 4300 3850 700 
+Connection ~ 3850 700 
+Wire Wire Line
+	1600 3500 2000 3500
+Wire Wire Line
+	2000 3500 2000 2750
+Wire Wire Line
+	1600 3500 1600 4250
+Wire Wire Line
+	5600 4250 5300 4250
+Connection ~ 1600 4250
+Wire Wire Line
+	1600 4250 1600 7350
+Wire Wire Line
+	9200 4250 9200 4300
+Wire Wire Line
+	9200 4300 5300 4300
+Wire Wire Line
+	5300 4300 5300 4250
+Connection ~ 5300 4250
+Wire Wire Line
+	5300 4250 1600 4250
+Wire Wire Line
+	3850 7500 2100 7500
+Wire Wire Line
+	2100 7500 2100 7350
+Wire Wire Line
+	2100 7350 1600 7350
+Connection ~ 1600 7350
+Wire Wire Line
+	9200 600  5500 600 
+Wire Wire Line
+	5500 600  5500 700 
+Wire Wire Line
+	9200 600  9200 1050
+Connection ~ 5500 700 
+Wire Wire Line
+	5500 700  3850 700 
+Wire Wire Line
+	2150 700  3850 700 
+Wire Wire Line
+	1600 7350 1600 7500
 $EndSCHEMATC
