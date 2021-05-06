@@ -1,0 +1,121 @@
+
+(rules PCB FinalPCB
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 28591)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND /RESET /8086/AD14 /8086/READY /8086/AD13 /8086/AD12 /~INTA /8086/AD11
+    /8086/ALE /8086/AD10 /8086/~DEN /8086/AD9 /8086/DT~R /8086/AD8 /8086/IO /8086/AD7
+    /8086/Write /8086/AD6 /8086/AD5 /8086/AD4 /8086/Read /8086/AD3 /8086/AD2 /~BHE~S7
+    /8086/AD1 /A19 /8086/AD0 /A18 /A17 /INTR /A16 /CLK
+    /8086/AD15 VCC /PCLK +5V /8255/P4 /8255/P10 /8255/P5 /8255/P9
+    /8255/P6 /8255/P8 /8255/P7 /8255/P19 /~WR /8255/P18 /8255/P17 /D0
+    /8255/P16 /D1 /8255/P20 /D2 /8255/P21 /D3 /8255/P22 /D4
+    /8255/P23 /D5 /A1 /D6 /A2 /D7 /8255/P15 /~RD
+    /8255/P14 /8255/P0 /8255/P13 /8255/P1 /8255/P12 /8255/P2 /8255/P11 /8255/P3
+    /8259/IR0 /CNTR2 /IRQ "/16550_INTR" /8279/Col2 /8279/Col3 /8279/Col4 /8279/CS
+    /8279/Row0 /8279/Row1 /8279/Row2 /8279/Row3 /8279/Shift /8279/CNTRL /8279/Col0 /8279/Col1
+    /A0 /16550/SIN /16550/SOUT /M~IO /16550/~CTS "Net-(R4-Pad2)" "Net-(R5-Pad2)" "Net-(8259INTR1-Pad1)"
+    "Net-(8259INTR1-Pad15)" "Net-(8259INTR1-Pad16)" "Net-(8259INTR1-Pad22)" "Net-(8259INTR1-Pad23)" "Net-(8259INTR1-Pad24)" "Net-(8259INTR1-Pad25)" "Net-(8259INTR1-Pad12)" "Net-(8259INTR1-Pad13)"
+    /A11 /A3 "Net-(8259Selector1-Pad12)" /A4 /A5 /A12 /A6 /A13
+    /A7 /A14 /A8 /A15 /A9 "Net-(8259Selector1-Pad18)" /A10 "Net-(8279Keyboard1-Pad23)"
+    "Net-(8279Keyboard1-Pad24)" "Net-(8279Keyboard1-Pad25)" "Net-(8279Keyboard1-Pad6)" "Net-(8279Keyboard1-Pad26)" "Net-(8279Keyboard1-Pad7)" "Net-(8279Keyboard1-Pad27)" "Net-(8279Keyboard1-Pad8)" "Net-(8279Keyboard1-Pad28)"
+    "Net-(8279Keyboard1-Pad29)" "Net-(8279Keyboard1-Pad30)" "Net-(8279Keyboard1-Pad31)" "Net-(C10-Pad1)" "Net-(CLK1-Pad11)" "Net-(CLK1-Pad3)" "Net-(CLK1-Pad12)" "Net-(CLK1-Pad4)"
+    "Net-(CLK1-Pad14)" "Net-(CLK1-Pad6)" "Net-(CLK1-Pad15)" "Net-(CLK1-Pad7)" "Net-(CLK1-Pad16)" "Net-(CLK1-Pad17)" "Net-(CMOS1-Pad30)" "/CMOS Flash/CMOSHierarchal1/CS"
+    +12V "Net-(Counter1-Pad14)" "Net-(Counter1-Pad16)" "Net-(Counter1-Pad17)" "Net-(Counter1-Pad18)" "Net-(Counter1-Pad9)" "Net-(Counter1-Pad21)" "Net-(Counter1-Pad10)"
+    "Net-(Counter1-Pad11)" "Net-(Counter_Decode1-Pad12)" /8086/S3 /8086/S4 "Net-(CPU1-Pad17)" /8086/S5 /8086/S6 "Net-(CPU1-Pad31)"
+    "Net-(CPU1-Pad30)" "Net-(CPU1-Pad23)" "Net-(CPU_ADecode3-Pad12)" "Net-(CPU_ADecode3-Pad13)" "Net-(CPU_ADecode3-Pad14)" "Net-(CPU_ADecode3-Pad15)" "Net-(CPU_ADecode3-Pad16)" "Net-(CPU_ADecode3-Pad17)"
+    "Net-(CPU_ADecode3-Pad18)" "Net-(CPU_ADecode3-Pad19)" /D15 /D14 /D13 /D12 /D11 /D10
+    /D9 /D8 "Net-(CPU_IO/WR1-Pad9)" "Net-(CPU_IO/WR1-Pad8)" "Net-(CPU_IO/WR1-Pad17)" "Net-(CPU_IO/WR1-Pad7)" "Net-(CPU_IO/WR1-Pad15)" "Net-(CPU_IO/WR1-Pad5)"
+    "Net-(CPU_IO/WR1-Pad13)" "Net-(CPU_IO/WR1-Pad3)" "Net-(CPU_IO/WR1-Pad12)" "Net-(CPU_IO/WR1-Pad11)" "Net-(D2-Pad2)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(D3-Pad2)"
+    "Net-(D4-Pad1)" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D5-Pad1)" "Net-(D6-Pad1)" "Net-(D6-Pad2)" "Net-(D7-Pad1)" "Net-(D7-Pad2)"
+    "Net-(D8-Pad2)" "Net-(D8-Pad1)" "Net-(D9-Pad2)" "Net-(D9-Pad1)" "Net-(DIP_16LA1-Pad12)" "Net-(DIP_16LA1-Pad13)" "Net-(DIP_16LA1-Pad19)" "Net-(DIP_LS244-Pad8)"
+    "Net-(DIP_LS244-Pad17)" "Net-(DIP_LS244-Pad6)" "Net-(DIP_LS244-Pad15)" "Net-(DIP_LS244-Pad4)" "Net-(DIP_LS244-Pad13)" "Net-(DIP_LS244-Pad2)" "Net-(DIP_LS244-Pad11)" "Net-(Display1-Pad19)"
+    "Net-(Display1-Pad9)" "Net-(Display1-Pad16)" "Net-(Display1-Pad6)" "Net-(Display1-Pad15)" "Net-(Display1-Pad5)" "Net-(Display1-Pad12)" "Net-(Display1-Pad2)" "Net-(Display1-Pad11)"
+    "Net-(Display2-Pad11)" "Net-(Display2-Pad2)" "Net-(Display2-Pad12)" "Net-(Display2-Pad5)" "Net-(Display2-Pad15)" "Net-(Display2-Pad6)" "Net-(Display2-Pad16)" "Net-(Display2-Pad9)"
+    "Net-(Display2-Pad19)" "Net-(Display3-Pad11)" "Net-(Display_Decode1-Pad18)" "Net-(Display_Decode1-Pad17)" "Net-(Display_Decode1-Pad16)" "Net-(Display_Decode1-Pad15)" "Net-(Display_Decode1-Pad14)" "Net-(Display_Decode1-Pad13)"
+    "Net-(Display_Decode1-Pad12)" "Net-(Display_Decode1-Pad1)" "Net-(Display_Decode2-Pad1)" "Net-(Display_Decode2-Pad12)" "Net-(Display_Decode2-Pad13)" "Net-(Display_Decode2-Pad14)" "Net-(Display_Decode2-Pad15)" "Net-(Display_Decode2-Pad16)"
+    "Net-(Display_Decode2-Pad17)" /16550/DCD9 /16550/DSR9 /16550/RXD /16550/RTS9 /16550/TXD /16550/CTS /16550/RI9
+    /SRAM/CE11 /SRAM/CE01 "Net-(KeyboardSelector1-Pad12)" "Net-(KeyboardSelector1-Pad18)" "Net-(LCD_16L8-Pad19)" "Net-(LCD_16L8-Pad12)" +3V3 /SRAM/CE10
+    /SRAM/CE00 "Net-(MAX235-Pad1)" /16550/RI /16550/RTS /16550/DTR9 "Net-(MAX235-Pad16)" /16550/DTR "Net-(MAX235-Pad19)"
+    /16550/DCD "Net-(MAX235-Pad22)" /16550/DSR "Net-(PPI1-Pad6)" /8255/P28 /8255/P34 /8255/P29 /8255/P33
+    /8255/P30 /8255/P32 /8255/P31 /8255/P43 /8255/P42 /8255/P41 /8255/P40 /8255/P44
+    /8255/P45 /8255/P46 /8255/P47 "Net-(PPI2-Pad6)" /8255/P39 /8255/P38 /8255/P24 /8255/P37
+    /8255/P25 /8255/P36 /8255/P26 /8255/P35 /8255/P27 /8255/P51 /8255/P59 /8255/P50
+    /8255/P60 /8255/P49 /8255/P61 /8255/P48 /8255/P62 /8255/P63 "Net-(PPI3-Pad6)" /8255/P71
+    /8255/P70 /8255/P69 /8255/P68 /8255/P64 /8255/P65 /8255/P66 /8255/P67 /8255/P55
+    /8255/P56 /8255/P54 /8255/P57 /8255/P53 /8255/P58 /8255/P52 "Net-(Resistor10K1-Pad2)" "Net-(Seven_Seg1-Pad12)"
+    "Net-(Seven_Seg1-Pad6)" "Net-(Seven_Seg1-Pad5)" "Net-(Seven_Seg1-Pad4)" "Net-(Seven_Seg1-Pad3)" "Net-(Seven_Seg2-Pad3)" "Net-(Seven_Seg2-Pad4)" "Net-(Seven_Seg2-Pad5)" "Net-(Seven_Seg2-Pad6)"
+    "Net-(Seven_Seg2-Pad12)" "Net-(SIXTEENL8-Pad12)" "Net-(SIXTEENL8-Pad13)" "Net-(SIXTEENL8-Pad19)" "Net-(SRAMSelector1-Pad19)" "Net-(SRAMSelector1-Pad18)" "Net-(SRAMSelector1-Pad15)" "Net-(SRAMSelector1-Pad14)"
+    "Net-(SRAMSelector1-Pad13)" "Net-(SRAMSelector1-Pad12)" "Net-(U1-Pad2)" "Net-(U1-Pad1)" "Net-(U9-Pad9)" "Net-(U9-Pad10)" "Net-(U9-Pad11)" "Net-(U9-Pad12)"
+    "Net-(U9-Pad13)" "Net-(U9-Pad14)" "Net-(U9-Pad7)" "/CMOS Flash/CMOSHierarchal/CS" "Net-(U41-Pad30)" "Net-(UART1-Pad17)" "Net-(UART1-Pad15)" "Net-(UART1-Pad34)"
+    "Net-(UART1-Pad31)" "Net-(UART1-Pad29)" "Net-(UART1-Pad24)" "Net-(UART1-Pad23)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
