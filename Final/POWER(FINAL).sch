@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 14 16
-Title ""
+Title "Power"
 Date ""
 Rev ""
-Comp ""
-Comment1 ""
+Comp "UMBC 2021"
+Comment1 "Christian Lostoski"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -482,7 +482,7 @@ U 1 1 60B637C0
 P 9550 2300
 F 0 "Power_1" H 9578 2276 50  0000 L CNN
 F 1 "Conn_01x02_Female" H 9578 2185 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Horizontal" H 9550 2300 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical" H 9550 2300 50  0001 C CNN
 F 3 "~" H 9550 2300 50  0001 C CNN
 	1    9550 2300
 	1    0    0    -1  

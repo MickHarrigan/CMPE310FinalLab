@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 16
-Title ""
+Title "CMPE 310 Final Lab"
 Date ""
 Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Comp "UMBC 2021"
+Comment1 "Andrew Mathews"
+Comment2 "Christian Lostoski"
+Comment3 "Mick Harrigan"
+Comment4 "Xavier Smith"
 $EndDescr
 $Sheet
 S 2450 600  1550 2450

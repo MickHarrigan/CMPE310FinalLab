@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 16
-Title ""
+Title "CMOS Decode"
 Date ""
 Rev ""
-Comp ""
-Comment1 ""
+Comp "UMBC 2021"
+Comment1 "Xavier Smith"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -81,10 +81,10 @@ A19
 Wire Wire Line
 	4500 2600 4500 3050
 $Comp
-L 74xx:74LS138 U9
+L 74xx:74LS138 CMOS_74LS138
 U 1 1 60933BB4
 P 3950 2900
-F 0 "U9" H 3950 3681 50  0000 C CNN
+F 0 "CMOS_74LS138" H 3950 3681 50  0000 C CNN
 F 1 "74LS138" H 3950 3590 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 3950 2900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 3950 2900 50  0001 C CNN

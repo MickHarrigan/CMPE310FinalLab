@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 11 16
-Title ""
+Title "16550 UART"
 Date ""
 Rev ""
-Comp ""
-Comment1 ""
+Comp "UMBC 2021"
+Comment1 "Xavier Smith"
 Comment2 ""
 Comment3 ""
 Comment4 ""

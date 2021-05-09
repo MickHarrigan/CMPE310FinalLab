@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 10 16
-Title ""
+Title "8254"
 Date ""
 Rev ""
-Comp ""
-Comment1 ""
+Comp "UMBC 2021"
+Comment1 "Andrew Mathews"
 Comment2 ""
 Comment3 ""
 Comment4 ""
